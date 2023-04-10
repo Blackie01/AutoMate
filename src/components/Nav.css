@@ -1,0 +1,25 @@
+.overall-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 80px 0 80px;
+}
+
+.middle-menu {
+    width: 35%;
+}
+
+.middle-menu ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.access-menu {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+hr {
+    width: 90%;
+}
