@@ -3,6 +3,12 @@
 
 .app {
   font-family: 'Lato', sans-serif;
+
+}
+
+.group-1-for-bg-color {
+  background-color: #F2F2F2;
+  padding-bottom: 90px;
 }
 
 

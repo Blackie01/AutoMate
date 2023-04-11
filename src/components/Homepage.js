@@ -14,8 +14,8 @@ function Homepage () {
 
             <section className='hero'>
                 <section className='hero-text-area'>
-                    <h1 className='jumbo-text'>Manage your fleet, <br/> like a pro.</h1>
-                    <p>the number of vehicles don't matter, AutoMate provides all <br/> the tools you need to boost productivity</p>
+                    <h2 className='jumbo-text'>Manage your fleet, <br/> like a pro.</h2>
+                    <p>The number of vehicles don't matter, AutoMate provides all <br/> the tools you need to boost productivity</p>
                 
                     <section className='jumbo-buttons'>
                         <Button variant='outlined'>Get Started</Button>
