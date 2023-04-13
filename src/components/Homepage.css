@@ -98,11 +98,13 @@ content: "";
 .hero-first-floor-text {
     width: 50%;
     margin-top: -60px;
+    
 }
 
-.product-title-container hr{
+ hr{
     margin-left: 0;
-
+    margin-bottom: 40px;
+    width: 100%;
 }
 
 .product-title {
@@ -114,14 +116,25 @@ content: "";
     margin-bottom: 30px;
 }
 
-.product-number {
-    font-size: 50px;
-    border: 1px solid red;
-    margin-top: 0;
+.products {
+    display: flex;
+    gap: 45px;
+    margin-bottom: -40px;
 
 }
 
-.products {
-    display: flex;
-    border: 1px solid blue;
+.product-number {
+    font-size: 50px;
+    margin-top: 0;
+    color: #9e9d9d;
+}
+
+.product-listing-title {
+    margin-top: 0;
+    font-size: 35px;
+    color: #494949;
+}
+
+.product-listing-text {
+    margin-top: -20px;
 }

@@ -7,7 +7,22 @@ import driverImage from '../assets/driver.jpg';
 
 
 function Homepage () {
-    
+
+    const leftSection = document.querySelector('.hero-first-floor-image');
+    const leftSectionTop = leftSection.offsetTop;
+
+    window.addEventListener('scroll', () => {
+        const scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+        if (scrollPosition > leftSectionTop - 20) {
+            leftSection.style.position = 'fixed';
+            leftSection.style.top = '20px';
+        } else {
+            leftSection.style.position = 'static';
+        }
+    });
+
+
     return (
         <section>
 
@@ -68,6 +83,8 @@ function Homepage () {
                         </section>
                     </section>
 
+                    <hr/>
+
                     <section className='products'>
                         <h1 className='product-number'>02</h1>
                         <section className='product-listing-container'>
@@ -78,6 +95,8 @@ function Homepage () {
                             </p>
                         </section>
                     </section>
+
+                    <hr/>
 
                     <section className='products'>
                         <h1 className='product-number'>03</h1>
@@ -91,6 +110,8 @@ function Homepage () {
                         </section>
                     </section>
 
+                    <hr/>
+
                     <section className='products'>
                         <h1 className='product-number'>04</h1>
                         <section className='product-listing-container'>
@@ -102,6 +123,8 @@ function Homepage () {
                             </p>
                         </section>
                     </section>
+
+                    <hr/>
 
                     <section className='products'>
                         <h1 className='product-number'>05</h1>
@@ -116,19 +139,23 @@ function Homepage () {
                         </section>
                     </section>
 
+                    <hr/>
+
                     <section className='products'>
                         <h1 className='product-number'>06</h1>
                         <section className='product-listing-container'>
                             <h2 className='product-listing-title'>Dashcams.</h2>
                             <p className='product-listing-text'>
                             When a road event occurs, get the whole picture with the 
-                            smartest dual-facing camera on the market. SafetyCam video, 
-                            backed by the power of AutoMate, provides the tools you 
+                            smartest dual-facing camera on the market. AutoMate provides the tools you 
                             need to keep your drivers on top of their game. 
                             
                             </p>
                         </section>
                     </section>
+
+                    <hr/>
+
                </section>
 
             </section>
