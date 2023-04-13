@@ -23,6 +23,7 @@ function Homepage () {
     });
 
 
+
     return (
         <section>
 
@@ -74,7 +75,7 @@ function Homepage () {
                     <section className='products'>
                         <h1 className='product-number'>01</h1>
                         <section className='product-listing-container'>
-                            <h2 className='product-listing-title'>Driver Safety.</h2>
+                            <h2 className='product-listing-title'>Driver safety.</h2>
                             <p className='product-listing-text'>
                             Prevent accidents and exonerate drivers with the most accurate, 
                             fastest AI dash cam. Reduce insurance costs by improving 
@@ -88,7 +89,7 @@ function Homepage () {
                     <section className='products'>
                         <h1 className='product-number'>02</h1>
                         <section className='product-listing-container'>
-                            <h2 className='product-listing-title'>Tracking & Telematics.</h2>
+                            <h2 className='product-listing-title'>Tracking & telematics.</h2>
                             <p className='product-listing-text'>
                             Real-time visibility into the location, 
                             utilization, and health of vehicles, equipment, and assets.
@@ -101,7 +102,7 @@ function Homepage () {
                     <section className='products'>
                         <h1 className='product-number'>03</h1>
                         <section className='product-listing-container'>
-                            <h2 className='product-listing-title'>Maintenance Scheduling.</h2>
+                            <h2 className='product-listing-title'>Maintenance scheduling.</h2>
                             <p className='product-listing-text'>
                             Maximize productivity and reduce costs with preventive fleet maintenance.
                             Create thorough inspection records for vehicles and assets. 
@@ -129,7 +130,7 @@ function Homepage () {
                     <section className='products'>
                         <h1 className='product-number'>05</h1>
                         <section className='product-listing-container'>
-                            <h2 className='product-listing-title'>Fleet Sustainability.</h2>
+                            <h2 className='product-listing-title'>Fleet sustainability.</h2>
                             <p className='product-listing-text'>
                             Save on fuel and reduce your environmental impact 
                             with AI-powered insights and fleet fuel management.

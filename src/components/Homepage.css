@@ -68,7 +68,7 @@ content: "";
 }
 
 .hero-first-floor-image {
-    position: relative;
+    /* position: relative; */
     width: 35%;
     height: 400px;
     border-radius: 10px;
