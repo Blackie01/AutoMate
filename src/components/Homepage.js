@@ -4,10 +4,12 @@ import './Homepage.css'
 import jumboImage from '../assets/jumbo.jpg';
 import Button from '@mui/material/Button';
 import driverImage from '../assets/driver.jpg';
+import sportsCar from '../assets/sports.jpg';
 
 
 function Homepage () {
 
+    /*
     const leftSection = document.querySelector('.hero-first-floor-image');
     const leftSectionTop = leftSection.offsetTop;
 
@@ -22,7 +24,7 @@ function Homepage () {
         }
     });
 
-
+    */
 
     return (
         <section>
@@ -160,6 +162,24 @@ function Homepage () {
                </section>
 
             </section>
+
+            {/* second floor */}
+
+
+            <section className='second-floor'>
+
+                <section>
+                    <h1 className='second-floor-title'>Products launching soon.</h1>
+                </section>
+
+                <section className='slide-text-container'>
+                    <h2 className='slide-text'>Live Driver Monitor - </h2>
+                    <h2 className='slide-text'>Advanced Vehicle Telematics - </h2>
+                    <h2 className='slide-text'>Vehicle Optimization Signals</h2>
+                </section>
+
+            </section>
+
         </section>
     );
 }
