@@ -186,8 +186,23 @@ content: "";
     font-size: 55px;
 }
 
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+}
+
 .slide-text-container {
     display: flex;
     gap: 5px;
-    
+    animation: 10s linear infinite slide;
+    /* overflow: hidden; */
+    white-space: nowrap;
+}
+
+.slide-text {
+    font-size: 55px;
 }

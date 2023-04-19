@@ -181,7 +181,9 @@ function Homepage () {
             <h2 className="slide-text">Live Driver Monitor - </h2>
             <h2 className="slide-text">Advanced Vehicle Telematics - </h2>
             <h2 className="slide-text">Vehicle Optimization Signals - </h2>
-            <h2 className="slide-text">Live Simulator</h2>
+            <h2 className="slide-text">Live Simulator - </h2>
+
+
           </section>
         </section>
       </section>
