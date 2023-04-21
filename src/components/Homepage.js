@@ -8,18 +8,11 @@ import driverImage from '../assets/driver.jpg';
 
 function Homepage () {
 
-    document.addEventListener ("DOMContentLoaded", function() {
-
-
-    })
-
     
 
     
     return (
       <section>
-
-        
         <section className="group-1-for-bg-color">
           <Navigation />
 
@@ -45,27 +38,22 @@ function Homepage () {
           </section>
         </section>
 
-
-
         <section className="hero-first-floor">
-          <section className='hero-first-floor-image'>
-            <section className='--inner'>
-                <section className='--subInner'>
-                    <img
-                    className="driver-image"
-                    src={driverImage}
-                    alt="driver-Image"
-                    />
+          <section className="hero-first-floor-image">
+            <section className="--inner">
+              <section className="--subInner">
+                <img
+                  className="driver-image"
+                  src={driverImage}
+                  alt="driver-Image"
+                />
 
-                    <section className="jumbo-buttons">
-                    <Button variant="contained">Get a quote</Button>
-                    <Button variant="outlined">Learn more</Button>
-                    </section>
-
+                <section className="jumbo-buttons">
+                  <Button variant="contained">Get a quote</Button>
+                  <Button variant="outlined">Learn more</Button>
                 </section>
-
+              </section>
             </section>
-                
           </section>
 
           <section className="hero-first-floor-text">
@@ -177,15 +165,24 @@ function Homepage () {
             <h1 className="second-floor-title">Products launching soon.</h1>
           </section>
 
-          <section className="slide-text-container">
-            <h2 className="slide-text">Live Driver Monitor - </h2>
-            <h2 className="slide-text">Advanced Vehicle Telematics - </h2>
-            <h2 className="slide-text">Vehicle Optimization Signals - </h2>
-            <h2 className="slide-text">Live Simulator - </h2>
-
-
-          </section>
+          <div className="slide-text-container">
+            <div className='--inner-slide'>
+              <div className='--subInner-slide'>
+                <h2 className="slide-text">Advanced Vehicle Telematics.</h2>
+                <h2 className="slide-text">Vehicle Optimization Signals.</h2>
+                <h2 className="slide-text">Live Simulator.</h2>
+                <h2 className="slide-text">Remote Control Access.</h2>
+                <h2 className="slide-text">AI Capabilities.</h2>
+                <h2 className="slide-text">Remote Vehicle Summon.</h2>
+              </div>
+            </div>
+          </div>
         </section>
+
+        <section>
+          <p style={{color: '#000', fontSize: '50px'}}>Go home</p>
+        </section>
+
       </section>
     );
 }
