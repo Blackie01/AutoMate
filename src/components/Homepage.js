@@ -167,20 +167,20 @@ function Homepage () {
 
           <div className="slide-text-container">
             <div className='--inner-slide'>
-              <div className='--subInner-slide'>
+              {/* <div className='--subInner-slide'> */}
                 <h2 className="slide-text">Advanced Vehicle Telematics.</h2>
                 <h2 className="slide-text">Vehicle Optimization Signals.</h2>
                 <h2 className="slide-text">Live Simulator.</h2>
                 <h2 className="slide-text">Remote Control Access.</h2>
                 <h2 className="slide-text">AI Capabilities.</h2>
                 <h2 className="slide-text">Remote Vehicle Summon.</h2>
-              </div>
+              {/* </div> */}
             </div>
           </div>
         </section>
 
-        <section>
-          <p style={{color: '#000', fontSize: '50px'}}>Go home</p>
+        <section className='emptyTest'>
+          <p className='test'>Go home</p>
         </section>
 
       </section>
