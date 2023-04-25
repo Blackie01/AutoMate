@@ -161,13 +161,13 @@ function Homepage () {
         {/* second floor */}
 
         <section className="second-floor">
-          <section>
-            <h1 className="second-floor-title">Products launching soon.</h1>
-          </section>
 
-          <div className="slide-text-container">
-            <div className='--inner-slide'>
-              {/* <div className='--subInner-slide'> */}
+            <section>
+              <h1 className="second-floor-title">Products launching soon.</h1>
+            </section>
+
+            <div className="slide-text-container">
+              {/* <div className="--inner-slide"> */}
                 <h2 className="slide-text">Advanced Vehicle Telematics.</h2>
                 <h2 className="slide-text">Vehicle Optimization Signals.</h2>
                 <h2 className="slide-text">Live Simulator.</h2>
@@ -176,13 +176,16 @@ function Homepage () {
                 <h2 className="slide-text">Remote Vehicle Summon.</h2>
               {/* </div> */}
             </div>
-          </div>
+
         </section>
 
-        <section className='emptyTest'>
-          <p className='test'>Go home</p>
+        <section className="emptyTest">
+          <p className="test">Go home</p>
         </section>
 
+        <section className="emptyTest2">
+          <p className="test">Come to school</p>
+        </section>
       </section>
     );
 }
