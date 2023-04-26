@@ -169,9 +169,11 @@ content: "";
 .second-floor {
     color: peachpuff;
     background: linear-gradient(#000, #12121f, #0f1924);
+}
+
+.second-floor-title-container {
+    margin-bottom: 25px;
     position: sticky;
-    top: 0;
-    background-color: white;
 }
 
 .second-floor-title {
@@ -185,8 +187,7 @@ content: "";
 .slide-text-container {
     height: 100vh;
     overflow-y: scroll;
-    padding-top: 20px;
-
+    text-align: center;
 }
 
 .--inner-slide {
@@ -197,19 +198,3 @@ content: "";
     font-size: 90px;
 }
 
-.emptyTest {
-    margin-top: 80px;
-    height: 700px;
-    background-color: blue;
-}
-
-.test {
-    color: red;
-}
-
-.emptyTest2 {
-    height: 600px;
-    display: block;
-    top: 0;
-    background-color: purple;
-}

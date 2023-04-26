@@ -6,10 +6,12 @@ import Button from '@mui/material/Button';
 import driverImage from '../assets/driver.jpg';
 
 
+
+
+
+
+
 function Homepage () {
-
-    
-
     
     return (
       <section>
@@ -162,7 +164,7 @@ function Homepage () {
 
         <section className="second-floor">
 
-            <section>
+            <section className='second-floor-title-container'>
               <h1 className="second-floor-title">Products launching soon.</h1>
             </section>
 
@@ -179,13 +181,8 @@ function Homepage () {
 
         </section>
 
-        <section className="emptyTest">
-          <p className="test">Go home</p>
-        </section>
 
-        <section className="emptyTest2">
-          <p className="test">Come to school</p>
-        </section>
+        
       </section>
     );
 }
