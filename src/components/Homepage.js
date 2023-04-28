@@ -1,14 +1,21 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Navigation from "./Nav";
 import "./Homepage.css";
 import jumboImage from "../assets/jumbo.jpg";
 import Button from "@mui/material/Button";
 import driverImage from "../assets/driver.jpg";
-import { ThemeProvider } from "styled-components";
 
 
 
 function Homepage() {
+
+  useEffect (() => {
+
+
+  }, []); 
+
+
+
   return (
     <section className="homepage">
       <div className="fixed-contact-button">
@@ -71,7 +78,7 @@ function Homepage() {
               <br />
               You just need to click a button.
             </p>
-            <hr />
+            <hr className="products-hr"/>
           </section>
 
           <section className="products">
@@ -86,7 +93,7 @@ function Homepage() {
             </section>
           </section>
 
-          <hr />
+          <hr className="products-hr"/>
 
           <section className="products">
             <h1 className="product-number">02</h1>
@@ -99,7 +106,7 @@ function Homepage() {
             </section>
           </section>
 
-          <hr />
+          <hr className="products-hr"/>
 
           <section className="products">
             <h1 className="product-number">03</h1>
@@ -113,7 +120,7 @@ function Homepage() {
             </section>
           </section>
 
-          <hr />
+          <hr className="products-hr"/>
 
           <section className="products">
             <h1 className="product-number">04</h1>
@@ -127,7 +134,7 @@ function Homepage() {
             </section>
           </section>
 
-          <hr />
+          <hr className="products-hr"/>
 
           <section className="products">
             <h1 className="product-number">05</h1>
@@ -141,7 +148,7 @@ function Homepage() {
             </section>
           </section>
 
-          <hr />
+          <hr className="products-hr"/>
 
           <section className="products">
             <h1 className="product-number">06</h1>
@@ -155,60 +162,29 @@ function Homepage() {
             </section>
           </section>
 
-          <hr />
+          <hr className="products-hr" />
         </section>
       </section>
 
       {/* second floor */}
 
-      {/* <section className="second-floor">
-        <section className="second-floor-title-container">
-          <h1 className="second-floor-title">Products launching soon.</h1>
-        </section>
-
-        <div className="slide-text-container">
-          <h2 className="slide-text">Advanced Vehicle Telematics.</h2>
-          <h2 className="slide-text">Vehicle Optimization Signals.</h2>
-          <h2 className="slide-text">Live Simulator.</h2>
-          <h2 className="slide-text">Remote Control Access.</h2>
-          <h2 className="slide-text">AI Capabilities.</h2>
-          <h2 className="slide-text">Remote Vehicle Summon.</h2>
-        </div>
-      </section> */}
-
-      {/* new second floor */}
-
-      {/* className="hero-first-floor"
-      className="hero-first-floor-image"
-      className="--inner"
-      className="--subInner"
-      className="hero-first-floor-text" */}
-
-      {/* <section id="hero-second-floor">
-        <section id="bg-bg">
-          <section id="second-inner">
-            <section id="bg-second-floor"> */}
-              {/* <img
-                className="driver-image"
-                src={driverImage}
-                alt="driver-Image"
-              /> */}
-            {/* </section>
-          </section>
-        </section>
-
-       
-      </section> */}
       <section className="upcoming-products">
+        <div className="upt-container">
+        <h2 className='upcoming-products-title'>Products launching soon</h2>
+        </div>
         <section className="x-second-floor-text">
           <h2 className="slide-text">Advanced Vehicle Telematics.</h2>
+          <hr className="upcoming-products-hr"/>
           <h2 className="slide-text">Vehicle Optimization Signals.</h2>
+          <hr className="upcoming-products-hr"/>
           <h2 className="slide-text">Live Simulator.</h2>
+          <hr className="upcoming-products-hr"/>
           <h2 className="slide-text">Remote Control Access.</h2>
+          <hr className="upcoming-products-hr"/>
           <h2 className="slide-text">AI Capabilities.</h2>
+          <hr className="upcoming-products-hr"/>
           <h2 className="slide-text">Remote Vehicle Summon.</h2>
         </section>
-
       </section>
 
     
@@ -216,6 +192,8 @@ function Homepage() {
       <section className="tester">test</section>
     </section>
   );
+
+
 }
 
 export default Homepage;
