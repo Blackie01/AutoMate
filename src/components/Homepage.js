@@ -4,10 +4,19 @@ import "./Homepage.css";
 import jumboImage from "../assets/jumbo.jpg";
 import Button from "@mui/material/Button";
 import driverImage from "../assets/driver.jpg";
+import { ThemeProvider } from "styled-components";
+
+
 
 function Homepage() {
   return (
     <section className="homepage">
+      <div className="fixed-contact-button">
+          <Button variant="contained">
+            Contact Us
+          </Button>
+      </div>
+
       <section className="group-1-for-bg-color">
         <Navigation />
 
@@ -167,7 +176,6 @@ function Homepage() {
         </div>
       </section> */}
 
-
       {/* new second floor */}
 
       {/* className="hero-first-floor"
@@ -176,20 +184,23 @@ function Homepage() {
       className="--subInner"
       className="hero-first-floor-text" */}
 
-      <section id="hero-second-floor" > 
-        <section id="bg-bg" >
-          <section id="second-inner" >
-            <section id="bg-second-floor" >
+      {/* <section id="hero-second-floor">
+        <section id="bg-bg">
+          <section id="second-inner">
+            <section id="bg-second-floor"> */}
               {/* <img
                 className="driver-image"
                 src={driverImage}
                 alt="driver-Image"
               /> */}
-            </section>
+            {/* </section>
           </section>
         </section>
 
-        <section id="hero-second-floor-text" >
+       
+      </section> */}
+      <section className="upcoming-products">
+        <section className="x-second-floor-text">
           <h2 className="slide-text">Advanced Vehicle Telematics.</h2>
           <h2 className="slide-text">Vehicle Optimization Signals.</h2>
           <h2 className="slide-text">Live Simulator.</h2>
@@ -197,13 +208,12 @@ function Homepage() {
           <h2 className="slide-text">AI Capabilities.</h2>
           <h2 className="slide-text">Remote Vehicle Summon.</h2>
         </section>
+
       </section>
 
+    
 
-<section className="tester">
-  test
-</section>
-
+      <section className="tester">test</section>
     </section>
   );
 }

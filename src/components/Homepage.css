@@ -2,6 +2,13 @@
     /* position: relative; */
 }
 
+.fixed-contact-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1;
+}
+
 .group-1-for-bg-color {
     background-color: #F2F2F2;
     padding-bottom: 100px;
@@ -274,16 +281,33 @@ height: 100%;
 
 
 
-#hero-second-floor-text {
+/* #hero-second-floor-text {
     color: yellow;
     z-index: 1;
-/* height: 50%; */
+height: 50%;
 text-align: center;
     width: 100%;
     margin-top: -60px;
+} */
+
+
+.upcoming-products {
+    position: relative;
+    height: 40vh;
+}
+
+.x-second-floor-text {
+    position: sticky;
+    top: 100px;
+    display: flex;
+    color: #12121f;
+    background-color: aquamarine;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 100px;
 }
 
 .tester {
-    height: 500px;
+    height: 2000px;
     background-color: aquamarine;
 }
