@@ -212,14 +212,16 @@ content: "";
 .upcoming-products-hr {
     margin-top: 2px;
     width: 100%;
+    border: 1px solid rgb(158, 157, 157, 0.3);
 }
 
 .slide-text {
     font-size: 50px;
-    background: -webkit-linear-gradient(#ee0979, #ff6a00);
+    /* background: -webkit-linear-gradient(#ee0979, #ff6a00);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
 
+    color: aqua;
 }
 
 .tester {

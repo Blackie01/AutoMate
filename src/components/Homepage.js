@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React from "react";
 import Navigation from "./Nav";
 import "./Homepage.css";
 import jumboImage from "../assets/jumbo.jpg";
@@ -9,10 +9,20 @@ import driverImage from "../assets/driver.jpg";
 
 function Homepage() {
 
-  useEffect (() => {
+
+  document.addEventListener('DOMContentLoaded', function() {
+    window.addEventListener('scroll', function() {
+      const slideText = document.querySelector('.slide-text');
+      const position = slideText.offsetTop;
+      if (position.top === 300) {
+      console.log(position.top);
+
+        slideText.style.color = 'yellow';
+      }
+    });
+  });
 
 
-  }, []); 
 
 
 
