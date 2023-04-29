@@ -9,20 +9,33 @@ import driverImage from "../assets/driver.jpg";
 
 function Homepage() {
 
+document.addEventListener('DOMContentLoaded', function() {
 
-  document.addEventListener('DOMContentLoaded', function() {
-    window.addEventListener('scroll', function() {
-      const slideText = document.querySelector('.slide-text');
-      const position = slideText.offsetTop;
-      if (position.top === 300) {
-      console.log(position.top);
+  window.addEventListener('scroll', revealFunction)
 
-        slideText.style.color = 'yellow';
-      }
-    });
-  });
+const revealFunction = () => {
 
+  // get the reveal class
+  let revealClass = document.querySelector('.reveal')
 
+  // get the position of the elements for each text
+  for (let i = 0; i < revealClass.length; i++) {
+    var windowHeight = window.innerHeight;
+    var textTop = revealClass[i].getBoundingClientRect().top;
+    var textVisible = 150;
+
+     // if/else statement to determine when the element is visible in the screen
+  if (textTop < windowHeight - textVisible) {
+    revealClass[i].classList.add('active')
+  } else {
+    revealClass[i].classList.remove('active')
+  }
+  }
+
+ 
+}
+
+});
 
 
 
@@ -183,17 +196,17 @@ function Homepage() {
         <h2 className='upcoming-products-title'>Products launching soon</h2>
         </div>
         <section className="x-second-floor-text">
-          <h2 className="slide-text">Advanced Vehicle Telematics.</h2>
+          <h2 className="slide-text reveal">Advanced Vehicle Telematics.</h2>
           <hr className="upcoming-products-hr"/>
-          <h2 className="slide-text">Vehicle Optimization Signals.</h2>
+          <h2 className="slide-text reveal">Vehicle Optimization Signals.</h2>
           <hr className="upcoming-products-hr"/>
-          <h2 className="slide-text">Live Simulator.</h2>
+          <h2 className="slide-text reveal">Live Simulator.</h2>
           <hr className="upcoming-products-hr"/>
-          <h2 className="slide-text">Remote Control Access.</h2>
+          <h2 className="slide-text reveal">Remote Control Access.</h2>
           <hr className="upcoming-products-hr"/>
-          <h2 className="slide-text">AI Capabilities.</h2>
+          <h2 className="slide-text reveal">AI Capabilities.</h2>
           <hr className="upcoming-products-hr"/>
-          <h2 className="slide-text">Remote Vehicle Summon.</h2>
+          <h2 className="slide-text reveal">Remote Vehicle Summon.</h2>
         </section>
       </section>
 
