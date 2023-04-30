@@ -5,46 +5,36 @@ import jumboImage from "../assets/jumbo.jpg";
 import Button from "@mui/material/Button";
 import driverImage from "../assets/driver.jpg";
 
-
-
 function Homepage() {
 
-document.addEventListener('DOMContentLoaded', function() {
+  // handling the scroll/animation effect of homepage second floor
 
-  window.addEventListener('scroll', revealFunction)
+    const revealFunction = () => {
+      // get the reveal class
+      let revealClasses = document.querySelectorAll(".reveal");
 
-const revealFunction = () => {
+      // get the position of the elements for each text
+      for (let revealElement of revealClasses) {
+        const windowHeight = window.innerHeight;
+        const textTop = revealElement.getBoundingClientRect().top;
+        const textVisible = 150;
 
-  // get the reveal class
-  let revealClass = document.querySelector('.reveal')
+        // if/else statement to determine when the element is visible in the screen
+        if (textTop < windowHeight - textVisible) {
+          revealElement.classList.add("active");
+        } else {
+          revealElement.classList.remove("active");
+        }
+      }
+    };
 
-  // get the position of the elements for each text
-  for (let i = 0; i < revealClass.length; i++) {
-    var windowHeight = window.innerHeight;
-    var textTop = revealClass[i].getBoundingClientRect().top;
-    var textVisible = 150;
-
-     // if/else statement to determine when the element is visible in the screen
-  if (textTop < windowHeight - textVisible) {
-    revealClass[i].classList.add('active')
-  } else {
-    revealClass[i].classList.remove('active')
-  }
-  }
-
- 
-}
-
-});
-
+    window.addEventListener("scroll", revealFunction);
 
 
   return (
     <section className="homepage">
       <div className="fixed-contact-button">
-          <Button variant="contained">
-            Contact Us
-          </Button>
+        <Button variant="contained">Contact Us</Button>
       </div>
 
       <section className="group-1-for-bg-color">
@@ -101,7 +91,7 @@ const revealFunction = () => {
               <br />
               You just need to click a button.
             </p>
-            <hr className="products-hr"/>
+            <hr className="products-hr" />
           </section>
 
           <section className="products">
@@ -116,7 +106,7 @@ const revealFunction = () => {
             </section>
           </section>
 
-          <hr className="products-hr"/>
+          <hr className="products-hr" />
 
           <section className="products">
             <h1 className="product-number">02</h1>
@@ -129,7 +119,7 @@ const revealFunction = () => {
             </section>
           </section>
 
-          <hr className="products-hr"/>
+          <hr className="products-hr" />
 
           <section className="products">
             <h1 className="product-number">03</h1>
@@ -143,7 +133,7 @@ const revealFunction = () => {
             </section>
           </section>
 
-          <hr className="products-hr"/>
+          <hr className="products-hr" />
 
           <section className="products">
             <h1 className="product-number">04</h1>
@@ -157,7 +147,7 @@ const revealFunction = () => {
             </section>
           </section>
 
-          <hr className="products-hr"/>
+          <hr className="products-hr" />
 
           <section className="products">
             <h1 className="product-number">05</h1>
@@ -171,7 +161,7 @@ const revealFunction = () => {
             </section>
           </section>
 
-          <hr className="products-hr"/>
+          <hr className="products-hr" />
 
           <section className="products">
             <h1 className="product-number">06</h1>
@@ -193,30 +183,26 @@ const revealFunction = () => {
 
       <section className="upcoming-products">
         <div className="upt-container">
-        <h2 className='upcoming-products-title'>Products launching soon</h2>
+          <h2 className="upcoming-products-title">Products launching soon</h2>
         </div>
         <section className="x-second-floor-text">
           <h2 className="slide-text reveal">Advanced Vehicle Telematics.</h2>
-          <hr className="upcoming-products-hr"/>
+          <hr className="upcoming-products-hr" />
           <h2 className="slide-text reveal">Vehicle Optimization Signals.</h2>
-          <hr className="upcoming-products-hr"/>
+          <hr className="upcoming-products-hr" />
           <h2 className="slide-text reveal">Live Simulator.</h2>
-          <hr className="upcoming-products-hr"/>
+          <hr className="upcoming-products-hr" />
           <h2 className="slide-text reveal">Remote Control Access.</h2>
-          <hr className="upcoming-products-hr"/>
+          <hr className="upcoming-products-hr" />
           <h2 className="slide-text reveal">AI Capabilities.</h2>
-          <hr className="upcoming-products-hr"/>
+          <hr className="upcoming-products-hr" />
           <h2 className="slide-text reveal">Remote Vehicle Summon.</h2>
         </section>
       </section>
 
-    
-
       <section className="tester">test</section>
     </section>
   );
-
-
 }
 
 export default Homepage;

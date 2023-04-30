@@ -14,7 +14,7 @@
     padding-bottom: 100px;
     overflow-x: hidden;
     position: relative;
-  }
+}
 
 .hero {
     display: flex;
@@ -27,9 +27,9 @@
     padding-top: unset;
 }
 
-.hero-text-area p{
+.hero-text-area p {
     margin-top: -20px;
-    
+
 }
 
 .jumbo-text {
@@ -41,7 +41,7 @@
     display: flex;
 }
 
-.jumbo-buttons Button{
+.jumbo-buttons Button {
     height: 40px;
     width: 47%;
     margin: 20px auto;
@@ -55,18 +55,18 @@
     border-bottom-right-radius: 120px;
 }
 
-.hero-image::before{
-content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); 
-  z-index: 1;
-  border-top-left-radius: 120px;
-  border-bottom-right-radius: 120px;
+.hero-image::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    border-top-left-radius: 120px;
+    border-bottom-right-radius: 120px;
 
 }
 
@@ -134,10 +134,10 @@ content: "";
 .hero-first-floor-text {
     width: 50%;
     margin-top: -60px;
-    
+
 }
 
-.products-hr{
+.products-hr {
     margin-left: 0;
     margin-bottom: 40px;
     width: 100%;
@@ -174,13 +174,12 @@ content: "";
     margin-top: -20px;
 }
 
-    /* second floor */
+/* second floor */
 
 .upcoming-products {
     position: relative;
     background-color: #000;
-    /* background-color: #F2F2F2; */
-
+    
     height: max-content;
     padding: 0;
     border-top-right-radius: 25px;
@@ -194,10 +193,10 @@ content: "";
     top: 0px;
     z-index: 1;
     background-color: #000;
-    /* background-color: #F2F2F2; */
     border-top-right-radius: 25px;
     border-top-left-radius: 25px;
-
+    width: 100%;
+    height: 120px;
 }
 
 .upcoming-products-title {
@@ -225,21 +224,23 @@ content: "";
 
 .slide-text {
     font-size: 50px;
-/* margin-left: 180px; */
     color: #fff;
+    width: max-content;
 }
 
 .reveal {
     position: relative;
-  transform: translateY(180px);
-  opacity: 0;
-  transition: 2s all ease;
+    transform: translateX(0);
+    opacity: 0.2;
+    transition: 2s all ease;
+    color: white;
 }
 
-.reveal.active{
-    transform: translateY(0);
+.reveal.active {
+    transform: translateX(180px);
     opacity: 1;
-  }
+    color: white;
+}
 
 .tester {
     height: 2000px;
