@@ -4,6 +4,10 @@ import "./Homepage.css";
 import jumboImage from "../assets/jumbo.jpg";
 import Button from "@mui/material/Button";
 import driverImage from "../assets/driver.jpg";
+import Testimonials from "./testimonials";
+// import PhoneEnabledOutlinedIcon from '@mui/icons-material/PhoneEnabledOutlined';
+
+
 
 function Homepage() {
 
@@ -33,12 +37,13 @@ function Homepage() {
 
   return (
     <section className="homepage">
+        <Navigation />
+
       <div className="fixed-contact-button">
-        <Button variant="contained">Contact Us</Button>
+        <Button variant="contained">Hit us up </Button>
       </div>
 
       <section className="group-1-for-bg-color">
-        <Navigation />
 
         <section className="hero">
           <section className="hero-text-area">
@@ -200,7 +205,38 @@ function Homepage() {
         </section>
       </section>
 
-      <section className="tester">test</section>
+      <section className="numbers-dont-lie">
+        <div className="numbers-title">
+          <h2>
+            The numbers don't lie, <br></br> we work!
+          </h2>
+        </div>
+
+        <section className="content-area">
+          <hr class="vertical" />
+
+          <div className='numbers-details'>
+            <h2>37</h2>
+            <p>Clients onboarded <br/> in 2 years</p>
+          </div>
+
+          <hr class="vertical" />
+
+          <div className='numbers-details'>
+            <h2>47%</h2>
+            <p>Average reduction <br/> in accidents</p>
+          </div>
+
+          <hr class="vertical" />
+
+          <div className='numbers-details'>
+            <h2>30%</h2>
+            <p>Decrease in <br/> insurance premiums</p>
+          </div>
+        </section>
+      </section>
+
+      <Testimonials />
     </section>
   );
 }

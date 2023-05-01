@@ -1,11 +1,17 @@
-.logo-menu p {
-    /* font-weight: bolder; */
+.navigation {
+    position: sticky;
+    top: 0;  
+    z-index: 1;
+    margin-bottom: 0;
+    background-color: #F2F2F2;
+
 }
 
 .overall-nav {
     display: flex;
     justify-content: space-between;
-    padding: 20px 80px 0 80px;    
+    padding: 20px 80px 0 80px;  
+    /* position: sticky; */
 }
 
 .middle-menu {
@@ -26,4 +32,5 @@
 
 hr {
     width: 90%;
+    margin-bottom: 0;
 }
