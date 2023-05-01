@@ -8,10 +8,10 @@ function Testimonials () {
 {
     user1: {
         name: 'Vivian Ikpeba',
-        company: 'Operations Head, ODY Logistics',
+        company: 'ODY Logistics',
         userImage: '',
-        starRating: '',
-        words: ''
+        position: 'Head of Operations',
+        words: 'AutoMate has transformed our operations by optimizing routes and reducing fuel consumption, resulting in significant cost savings.'
     }
 
 },
@@ -19,50 +19,50 @@ function Testimonials () {
 {
     user2: {
         name: 'Gbenga Ogunmade',
-        company: 'CEO, Gbenga Motors',
+        company: 'Gbenga Motors',
         userImage: '',
-        starRating: '',
-        words: ''
+        position: 'CEO',
+        words: 'With AutoMate real-time vehicle tracking, we are able to monitor our fleet performance and ensure on-time deliveries.'
     }
 },
 
 {
     user3: {
         name: 'Godwin John',
-        company: 'Logistics, Bolton White Hotels',
+        company: 'Bolton White Hotels',
         userImage: '',
-        starRating: '',
-        words: ''
+        position: 'Fleet Manager',
+        words: 'AutoMate maintenance scheduling feature has helped us streamline our maintenance processes and minimize downtime'
     }
 },
 
 {
     user4: {
         name: 'Adedoyin Gold',
-        company: 'CFO, Motive Cars',
+        company: 'Motive Cars',
         userImage: '',
-        starRating: '',
-        words: ''
+        position: 'Domestic Fleet Coord',
+        words: 'AutoMate driver safety monitoring has helped us improve driver behavior and reduce the risk of accidents'
     }
 },
 
 {
     user5: {
         name: 'Gabriel Thompson',
-        company: 'Logistics Head, Julius Berger',
+        company: 'Julius Berger',
         userImage: '',
-        starRating: '',
-        words: ''
+        position: 'Head of Logistics',
+        words: 'Thanks to AutoMate customizable reporting, we are able to access detailed fleet analytics and make informed decisions.'
     }
 },
 
 {
     user6: {
         name: 'Lois Lane',
-        company: 'CEO, Transformers Ltd.',
+        company: 'Transformers Ltd.',
         userImage: '',
-        starRating: '',
-        words: ''
+        position: 'CEO',
+        words: 'The AutoMate automated dispatch system has enabled us to efficiently assign tasks to our drivers and improve overall fleet productivity.'
     }
 } 
 
@@ -76,6 +76,10 @@ function Testimonials () {
             <div className='title'>
                 <h2>How clients use AutoMate for<br></br> better efficiency.</h2>
             </div>
+
+            <section>
+                
+            </section>
 
         </main>
     )

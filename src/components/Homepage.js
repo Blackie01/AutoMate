@@ -208,7 +208,7 @@ function Homepage() {
       <section className="numbers-dont-lie">
         <div className="numbers-title">
           <h2>
-            The numbers don't lie, <br></br> AutoMate works!
+            The numbers don't lie,  AutoMate works!
           </h2>
         </div>
 

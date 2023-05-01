@@ -259,6 +259,7 @@
 
 .numbers-dont-lie {
     margin: 200px 50px 150px 50px;
+    text-align: center;
 }
 
 .numbers-title h2 {
@@ -268,6 +269,7 @@
 .content-area {
     display: flex;
     gap: 50px;
+    justify-content: center;
 }
 
 .vertical {
