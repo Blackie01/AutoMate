@@ -30,7 +30,8 @@
     align-items: center;
 }
 
-hr {
+.divide {
+    display: block;
     width: 90%;
     margin-bottom: 0;
 }

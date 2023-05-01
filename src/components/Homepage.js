@@ -208,7 +208,7 @@ function Homepage() {
       <section className="numbers-dont-lie">
         <div className="numbers-title">
           <h2>
-            The numbers don't lie, <br></br> we work!
+            The numbers don't lie, <br></br> AutoMate works!
           </h2>
         </div>
 
@@ -223,14 +223,14 @@ function Homepage() {
           <hr class="vertical" />
 
           <div className='numbers-details'>
-            <h2>47%</h2>
+            <h2>47 <span className="percent">%</span> </h2>
             <p>Average reduction <br/> in accidents</p>
           </div>
 
           <hr class="vertical" />
 
           <div className='numbers-details'>
-            <h2>30%</h2>
+            <h2>30 <span className="percent">%</span></h2>
             <p>Decrease in <br/> insurance premiums</p>
           </div>
         </section>

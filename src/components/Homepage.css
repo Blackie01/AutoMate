@@ -64,7 +64,6 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
     border-top-left-radius: 120px;
     border-bottom-right-radius: 120px;
 
@@ -95,7 +94,7 @@
     height: 70vh;
     display: block;
     position: sticky;
-    top: 12%;
+    top: 18%;
 }
 
 .--subInner {
@@ -184,6 +183,8 @@
     padding: 0;
     border-top-right-radius: 25px;
     border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
     margin-top: 200px;
 
 }
@@ -195,6 +196,8 @@
     background-color: #000;
     border-top-right-radius: 25px;
     border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
     width: 100%;
     height: 120px;
 }
@@ -215,6 +218,8 @@
     text-align: start;
     z-index: -1;
     padding-bottom: 30px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 
 
@@ -253,7 +258,7 @@
 /* numbers dont lie section */
 
 .numbers-dont-lie {
-    margin: 150px 50px;
+    margin: 200px 50px 150px 50px;
 }
 
 .numbers-title h2 {
@@ -262,26 +267,31 @@
 
 .content-area {
     display: flex;
-    gap: 30px;
+    gap: 50px;
 }
 
 .vertical {
     height: 200px;
     width: 0;
-    /* border-left: none; */
     border: 1px solid black;
     margin: 0;
     padding: 0;
   }
 
   .numbers-details {
-    margin-right: 50px;
+    margin-right: 20px;
   }
   
   .numbers-details h2 {
     font-size: 100px;
     line-height: 100px;
     margin: 0 0 50px 0;
+  }
+
+  .percent {
+    font-size: 50px;
+    line-height: 10px;
+    margin-left: -10px;
   }
 
   .numbers-details p {
