@@ -233,6 +233,15 @@ function Homepage() {
             <h2>30 <span className="percent">%</span></h2>
             <p>Decrease in <br/> insurance premiums</p>
           </div>
+
+          <hr class="vertical" />
+
+          <div className='numbers-details'>
+            <h2>70 <span className="percent">%</span></h2>
+            <p>Increase in <br/> operational efficiency</p>
+          </div>
+
+
         </section>
       </section>
 
