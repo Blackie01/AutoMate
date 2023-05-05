@@ -262,6 +262,10 @@
     text-align: center;
 }
 
+.numbers-title {
+    margin-bottom: 70px;
+}
+
 .numbers-title h2 {
     font-size: 40px;
 }

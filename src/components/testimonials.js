@@ -1,91 +1,107 @@
-import React from 'react';
-import './testimonials.css';
-import vivian from '../assets/vivian.jpg'
-import gbenga from '../assets/gbenga.jpg'
-import godwin from '../assets/godwin.jpg'
-import adedoyin from '../assets/adedoyin.jpg'
-import gabriel from '../assets/gabriel.jpg'
-import lois from '../assets/lois.jpg'
+import React from "react";
+import "./testimonials.css";
+import vivian from "../assets/vivian.jpg";
+import gbenga from "../assets/gbenga.jpg";
+import godwin from "../assets/godwin.jpg";
+import adedoyin from "../assets/adedoyin.jpg";
+import gabriel from "../assets/gabriel.jpg";
+import lois from "../assets/lois.jpg";
 
-function Testimonials () {
+function Testimonials() {
+  const users = [
+    {
+      id: 1,
+      name: "Vivian Ikpeba",
+      company: "ODY Logistics",
+      userImage: vivian,
+      position: "Head of Operations",
+      words:
+        "AutoMate has transformed our operations by optimizing routes and reducing fuel consumption, resulting in significant cost savings.",
+    },
 
-    const users = [
+    // {
+    //   id: 2,
+    //   name: "Gbenga Ogunmade",
+    //   company: "Gbenga Motors",
+    //   userImage: gbenga,
+    //   position: "CEO",
+    //   words:
+    //     "With AutoMate real-time vehicle tracking, we are able to monitor our fleet performance and ensure on-time deliveries.",
+    // },
 
-{
-        name: 'Vivian Ikpeba',
-        company: 'ODY Logistics',
-        userImage: vivian,
-        position: 'Head of Operations',
-        words: 'AutoMate has transformed our operations by optimizing routes and reducing fuel consumption, resulting in significant cost savings.'
-},
+    // {
+    //   id: 3,
+    //   name: "Godwin John",
+    //   company: "Bolton White Hotels",
+    //   userImage: godwin,
+    //   position: "Fleet Manager",
+    //   words:
+    //     "AutoMate maintenance scheduling feature has helped us streamline our maintenance processes and minimize downtime",
+    // },
 
-{
-        name: 'Gbenga Ogunmade',
-        company: 'Gbenga Motors',
-        userImage: gbenga,
-        position: 'CEO',
-        words: 'With AutoMate real-time vehicle tracking, we are able to monitor our fleet performance and ensure on-time deliveries.'
-},
+    // {
+    //   id: 4,
+    //   name: "Adedoyin Gold",
+    //   company: "Motive Cars",
+    //   userImage: adedoyin,
+    //   position: "Domestic Fleet Coord",
+    //   words:
+    //     "AutoMate driver safety monitoring has helped us improve driver behavior and reduce the risk of accidents",
+    // },
 
-{
-        name: 'Godwin John',
-        company: 'Bolton White Hotels',
-        userImage: godwin,
-        position: 'Fleet Manager',
-        words: 'AutoMate maintenance scheduling feature has helped us streamline our maintenance processes and minimize downtime'
-},
+    // {
+    //   id: 5,
+    //   name: "Gabriel Thompson",
+    //   company: "Julius Berger",
+    //   userImage: gabriel,
+    //   position: "Head of Logistics",
+    //   words:
+    //     "Thanks to AutoMate customizable reporting, we are able to access detailed fleet analytics and make informed decisions.",
+    // },
 
-{
-        name: 'Adedoyin Gold',
-        company: 'Motive Cars',
-        userImage: adedoyin,
-        position: 'Domestic Fleet Coord',
-        words: 'AutoMate driver safety monitoring has helped us improve driver behavior and reduce the risk of accidents'
-},
+    // {
+    //   id: 6,
+    //   name: "Lois Lane",
+    //   company: "Transformers Ltd.",
+    //   userImage: lois,
+    //   position: "CEO",
+    //   words:
+    //     "The AutoMate automated dispatch system has enabled us to efficiently assign tasks to our drivers and improve overall fleet productivity.",
+    // },
+  ];
 
-{
-        name: 'Gabriel Thompson',
-        company: 'Julius Berger',
-        userImage: gabriel,
-        position: 'Head of Logistics',
-        words: 'Thanks to AutoMate customizable reporting, we are able to access detailed fleet analytics and make informed decisions.'
-},
-
-{
-        name: 'Lois Lane',
-        company: 'Transformers Ltd.',
-        userImage: lois,
-        position: 'CEO',
-        words: 'The AutoMate automated dispatch system has enabled us to efficiently assign tasks to our drivers and improve overall fleet productivity.'
-} 
-
-]
-
-    const reviewCard = users.map(user  => {
-
-        return (
-            <div>
-            <h2 className='company'>{user.company}</h2>
-        </div>
-
-        )
-       
-    })
-
-
+  const reviewCard = users.map((user) => {
     return (
-        <main className='container'>
+      <div key={user.id} className="individual-container">
+       
+        <h2 className="company">{user.company}</h2>
+        <p className="words">{user.words}</p>
 
-            <div className='title'>
-                <h2>How clients use AutoMate for<br></br> better efficiency.</h2>
+        <div className="user-label">
+            <div className="image">
+                <img src={user.userImage} />
             </div>
 
-            <section className='review-container'>
-                {reviewCard}
-            </section>
+            <div>
+                <p>{user.name}</p>
+                <p>{user.position}</p>
+            </div>
+        </div>
+      </div>
+    );
+  });
 
-        </main>
-    )
+  return (
+    <main className="container">
+      <div className="title">
+        <h2>
+          How clients use AutoMate for<br></br> better efficiency.
+        </h2>
+      </div>
+
+      <section className="review-container">{reviewCard}</section>
+    </main>
+  );
 }
 
 export default Testimonials;

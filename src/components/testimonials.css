@@ -7,6 +7,30 @@
     text-align: center;
 }
 
+.review-container {
+    display: flex;
+    gap: 30px;
+}
+
+.individual-container {
+    width: 40%;
+    border: 1px solid gray ;
+}
+
 .company {
     color: yellow;
+}
+
+.words {
+
+    flex-wrap: wrap;
+}
+
+.user-label {
+    display: flex;
+}
+
+.image img {
+    height: 40px;
+    width: 40px;
 }
