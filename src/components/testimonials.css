@@ -1,5 +1,5 @@
 .container {
-    height: 700px;
+    /* height: 700px; */
 }
 
 .title {
@@ -15,29 +15,66 @@
 
 .individual-container {
     width: 40%;
-    border: 1px solid gray ;
-    padding: 20px;
-    height: max-content;
+    height: 250px;
+    /* border-top: 2px solid rgb(183, 82, 183) ; */
+    /* height: auto; */
+    padding: 20px 0 20px 50px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .company {
-    color: yellow;
+    color: #000;
+    font-size: 30px;
 }
 
 .words {
-
+    width: 80%;
     flex-wrap: wrap;
+    /* font-weight: bold; */
 }
 
 .user-label {
     display: flex;
+    gap: 10px;
+    align-items: center;
 }
 
 .image img {
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
 }
 
 .user-info {
-    height: 40px;
+    height: max-content;
+}
+
+.user-info p {
+    font-size: smaller;
+    line-height: 6px;
+}
+
+.indicators {
+    display: flex;
+    margin-top: 100px;
+    gap: 100px;
+    justify-content: center;
+}
+
+.indicator-content {
+    text-align: center;
+}
+
+.indicator-content img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.indicator-content p {
+    font-size: smaller;
 }

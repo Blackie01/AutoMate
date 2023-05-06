@@ -100,6 +100,38 @@ function Testimonials() {
       </div>
 
       <section className="review-container">{reviewCard}</section>
+
+      <section className="indicators">
+        <div className="indicator-content">
+          <img src="https://images.pexels.com/photos/1337384/pexels-photo-1337384.jpeg?auto=compress&cs=tinysrgb&w=800"/>
+          <p>ODY Logistics</p>
+        </div>
+
+        <div className="indicator-content">
+          <img src="https://images.pexels.com/photos/1162361/pexels-photo-1162361.jpeg?auto=compress&cs=tinysrgb&w=800"/>
+          <p>Gbenga Motors</p>
+        </div>
+
+        <div className="indicator-content">
+          <img src="https://images.pexels.com/photos/2235130/pexels-photo-2235130.jpeg?auto=compress&cs=tinysrgb&w=800"/>
+          <p>Bolton White Hotels</p>
+        </div>
+
+        <div className="indicator-content">
+          <img src="https://images.pexels.com/photos/3767673/pexels-photo-3767673.jpeg?auto=compress&cs=tinysrgb&w=800"/>
+          <p>Motive Cars</p>
+        </div>
+
+        <div className="indicator-content">
+          <img src="https://images.pexels.com/photos/570047/pexels-photo-570047.jpeg?auto=compress&cs=tinysrgb&w=800"/>
+          <p>Julius Berger</p>
+        </div>
+
+        <div className="indicator-content">
+          <img src="https://images.pexels.com/photos/1365795/pexels-photo-1365795.jpeg?auto=compress&cs=tinysrgb&w=800"/>
+          <p>Transformers ltd</p>
+        </div>
+      </section>
     </main>
   );
 }
