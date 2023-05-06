@@ -82,7 +82,7 @@ function Testimonials() {
                 <img src={user.userImage} />
             </div>
 
-            <div>
+            <div className="user-info">
                 <p>{user.name}</p>
                 <p>{user.position}</p>
             </div>

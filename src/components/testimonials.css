@@ -10,11 +10,14 @@
 .review-container {
     display: flex;
     gap: 30px;
+    justify-content: center;
 }
 
 .individual-container {
     width: 40%;
     border: 1px solid gray ;
+    padding: 20px;
+    height: max-content;
 }
 
 .company {
@@ -33,4 +36,8 @@
 .image img {
     height: 40px;
     width: 40px;
+}
+
+.user-info {
+    height: 40px;
 }
