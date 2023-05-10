@@ -40,7 +40,7 @@ function Homepage() {
         <Navigation />
 
       <div className="fixed-contact-button">
-        <Button variant="contained">Hit us up </Button>
+        <Button variant="contained">Contact Us</Button>
       </div>
 
       <section className="group-1-for-bg-color">
