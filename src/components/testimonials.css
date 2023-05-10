@@ -1,85 +1,85 @@
-.container {
-    /* height: 700px; */
-}
-
 .title {
-    font-size: 2.5rem;
-    text-align: center;
+  font-size: 2rem;
+
+  text-align: center;
 }
 
 .review-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
 }
 
-.individual-container {
-    width: 40%;
-    height: 250px;
-    padding: 20px 0 20px 50px;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+#individual-container {
+  width: 40%;
+  height: 250px;
+  padding: 20px 0 20px 50px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .company {
-    color: #000;
-    font-size: 30px;
+  color: #000;
+  font-size: 30px;
 }
 
 .words {
-    width: 80%;
-    flex-wrap: wrap;
+  width: 80%;
+  flex-wrap: wrap;
 }
 
 .user-label {
-    display: flex;
-    gap: 10px;
-    align-items: center;
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 .image img {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
 }
 
 .user-info {
-    height: max-content;
+  height: max-content;
 }
 
 .user-info p {
-    font-size: smaller;
-    line-height: 6px;
+  font-size: smaller;
+  line-height: 6px;
 }
 
 .indicators {
-    gap: 50px;
-    display: flex;
+  gap: 50px;
+  display: flex;
 }
 
 .indicators:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .indicator-content {
-    text-align: center;
-    width: max-content;
-    font-size: smaller;
+  text-align: center;
+  width: max-content;
+  font-size: smaller;
+  border-bottom: 2px solid white;
+  padding-bottom: 5px;
 }
 
 .indicator-content:hover {
-    border-bottom: 2px solid #000;
+  border-bottom-color: #000;
+}
+
+.clickingImage {
+    margin-bottom: 10px;
 }
 
 .clickingImage img {
-    width: 50px;
-    height: 50px;
-    border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
 }
-
-
-

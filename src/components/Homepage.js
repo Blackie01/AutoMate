@@ -5,46 +5,44 @@ import jumboImage from "../assets/jumbo.jpg";
 import Button from "@mui/material/Button";
 import driverImage from "../assets/driver.jpg";
 import Testimonials from "./testimonials";
-// import PhoneEnabledOutlinedIcon from '@mui/icons-material/PhoneEnabledOutlined';
+import FooterSection from "./footer";
+
 
 
 
 function Homepage() {
-
   // handling the scroll/animation effect of homepage second floor
 
-    const revealFunction = () => {
-      // get the reveal class
-      let revealClasses = document.querySelectorAll(".reveal");
+  const revealFunction = () => {
+    // get the reveal class
+    let revealClasses = document.querySelectorAll(".reveal");
 
-      // get the position of the elements for each text
-      for (let revealElement of revealClasses) {
-        const windowHeight = window.innerHeight;
-        const textTop = revealElement.getBoundingClientRect().top;
-        const textVisible = 150;
+    // get the position of the elements for each text
+    for (let revealElement of revealClasses) {
+      const windowHeight = window.innerHeight;
+      const textTop = revealElement.getBoundingClientRect().top;
+      const textVisible = 150;
 
-        // if/else statement to determine when the element is visible in the screen
-        if (textTop < windowHeight - textVisible) {
-          revealElement.classList.add("active");
-        } else {
-          revealElement.classList.remove("active");
-        }
+      // if/else statement to determine when the element is visible in the screen
+      if (textTop < windowHeight - textVisible) {
+        revealElement.classList.add("active");
+      } else {
+        revealElement.classList.remove("active");
       }
-    };
+    }
+  };
 
-    window.addEventListener("scroll", revealFunction);
-
+  window.addEventListener("scroll", revealFunction);
 
   return (
     <section className="homepage">
-        <Navigation />
+      <Navigation />
 
       <div className="fixed-contact-button">
         <Button variant="contained">Contact Us</Button>
       </div>
 
       <section className="group-1-for-bg-color">
-
         <section className="hero">
           <section className="hero-text-area">
             <h2 className="jumbo-text">
@@ -207,45 +205,59 @@ function Homepage() {
 
       <section className="numbers-dont-lie">
         <div className="numbers-title">
-          <h2>
-            The numbers don't lie,  AutoMate works!
-          </h2>
+          <h2>The numbers don't lie, AutoMate works!</h2>
         </div>
 
         <section className="content-area">
           <hr class="vertical" />
 
-          <div className='numbers-details'>
+          <div className="numbers-details">
             <h2>37</h2>
-            <p>Clients onboarded <br/> in 2 years</p>
+            <p>
+              Clients onboarded <br /> in 2 years
+            </p>
           </div>
 
           <hr class="vertical" />
 
-          <div className='numbers-details'>
-            <h2>47 <span className="percent">%</span> </h2>
-            <p>Average reduction <br/> in accidents</p>
+          <div className="numbers-details">
+            <h2>
+              47 <span className="percent">%</span>{" "}
+            </h2>
+            <p>
+              Average reduction <br /> in accidents
+            </p>
           </div>
 
           <hr class="vertical" />
 
-          <div className='numbers-details'>
-            <h2>30 <span className="percent">%</span></h2>
-            <p>Decrease in <br/> insurance premiums</p>
+          <div className="numbers-details">
+            <h2>
+              30 <span className="percent">%</span>
+            </h2>
+            <p>
+              Decrease in <br /> insurance premiums
+            </p>
           </div>
 
           <hr class="vertical" />
 
-          <div className='numbers-details'>
-            <h2>70 <span className="percent">%</span></h2>
-            <p>Increase in <br/> operational efficiency</p>
+          <div className="numbers-details">
+            <h2>
+              70 <span className="percent">%</span>
+            </h2>
+            <p>
+              Increase in <br /> operational efficiency
+            </p>
           </div>
-
-
         </section>
       </section>
 
       <Testimonials />
+
+      <FooterSection />
+
+
     </section>
   );
 }

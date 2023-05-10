@@ -1,0 +1,7 @@
+.footer-container {
+    height: 400px;
+    border: 2px solid red;
+    color: black;
+    background-color: yellow;
+    margin-top: 100px;
+}

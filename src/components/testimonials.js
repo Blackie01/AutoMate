@@ -7,7 +7,6 @@ import adedoyin from "../assets/adedoyin.jpg";
 import gabriel from "../assets/gabriel.jpg";
 import lois from "../assets/lois.jpg";
 
-
 // object data
 
 const users = [
@@ -19,7 +18,7 @@ const users = [
     userImage: vivian,
     position: "Head of Operations",
     words:
-      '"AutoMate has transformed our operations by optimizing routes and reducing fuel consumption, resulting in significant cost savings."'
+      '"AutoMate has transformed our operations by optimizing routes and reducing fuel consumption, resulting in significant cost savings."',
   },
 
   {
@@ -30,7 +29,7 @@ const users = [
     userImage: gbenga,
     position: "CEO",
     words:
-      '"With AutoMate real-time vehicle tracking, we are able to monitor our fleet performance and ensure on-time deliveries."'
+      '"With AutoMate Real-time Vehicle Tracking, we are able to monitor our fleet performance and ensure on-time deliveries."',
   },
 
   {
@@ -41,7 +40,7 @@ const users = [
     userImage: godwin,
     position: "Fleet Manager",
     words:
-      '"AutoMate maintenance scheduling feature has helped us streamline our maintenance processes and minimize downtime"'
+      '"AutoMate Maintenance Scheduling feature has helped us streamline our maintenance processes and minimize downtime"',
   },
 
   {
@@ -52,7 +51,7 @@ const users = [
     userImage: adedoyin,
     position: "Domestic Fleet Coord",
     words:
-      '"AutoMate driver safety monitoring has helped us improve driver behavior and reduce the risk of accidents"'
+      '"AutoMate Driver Safety Monitoring system has helped us improve driver behavior and reduce the risk of accidents"',
   },
 
   {
@@ -63,7 +62,7 @@ const users = [
     userImage: gabriel,
     position: "Head of Logistics",
     words:
-      '"Thanks to AutoMate customizable reporting, we are able to access detailed fleet analytics and make informed decisions."'
+      '"Thanks to AutoMate Customizable Reporting, we are able to access detailed fleet analytics and make informed decisions."',
   },
 
   {
@@ -74,15 +73,14 @@ const users = [
     userImage: lois,
     position: "CEO",
     words:
-      '"The AutoMate automated dispatch system has enabled us to efficiently assign tasks to our drivers and improve overall fleet productivity."'
-  }
+      '"The AutoMate Automated Dispatch system has enabled us to efficiently assign tasks to our drivers and improve overall fleet productivity."',
+  },
 ];
-
 
 // show content
 function showUserContent(user) {
   return (
-    <div className="individual-container">
+    <div id="individual-container">
       <h2 className="company">{user.company}</h2>
       <p className="words">{user.words}</p>
 
@@ -96,15 +94,11 @@ function showUserContent(user) {
           <p>{user.position}</p>
         </div>
       </div>
-
-
     </div>
   );
 }
 
-
 function Testimonials() {
-
   const [selectedUser, setSelectedUser] = useState(users[0]);
 
   return (
@@ -116,12 +110,15 @@ function Testimonials() {
       </div>
 
       <section className="review-container">
-
         {selectedUser && showUserContent(selectedUser)}
 
         <div className="indicators">
-          {users.map(user => (
-            <div key={user.name} onClick={() => setSelectedUser(user)} className="indicator-content">
+          {users.map((user) => (
+            <div
+              key={user.name}
+              onClick={() => setSelectedUser(user)}
+              className="indicator-content"
+            >
               <div className="clickingImage">
                 <img src={user.logo} />
               </div>
@@ -129,9 +126,7 @@ function Testimonials() {
             </div>
           ))}
         </div>
-
       </section>
-
     </main>
   );
 }
