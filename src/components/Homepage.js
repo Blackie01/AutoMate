@@ -255,7 +255,19 @@ function Homepage() {
 
       <Testimonials />
 
-      <FooterSection />
+      <section className="contact-container">
+
+        <div className="contact-text">
+          <h2>Insights into every <br/> <strong>detail</strong></h2>
+
+        </div>
+        
+        <div className="telephone">
+
+        </div>
+
+      </section>
+
 
 
     </section>

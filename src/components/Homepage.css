@@ -178,7 +178,6 @@
 .upcoming-products {
     position: relative;
     background-color: #000;
-    
     height: max-content;
     padding: 0;
     border-top-right-radius: 25px;
@@ -303,4 +302,15 @@
   .numbers-details p {
     font-size: medium;
     font-weight: 400;
+  }
+
+  /* Contact Area */
+
+  .contact-container {
+    margin-top: 200px;
+    padding-top: 100px;
+    background-color: #F2F2F2;
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
   }
