@@ -2,6 +2,8 @@ import React from "react";
 import Navigation from "./Nav";
 import "./Homepage.css";
 import jumboImage from "../assets/jumbo.jpg";
+import landline from "../assets/e-landline.png";
+import handset from "../assets/e-handset.png";
 import Button from "@mui/material/Button";
 import driverImage from "../assets/driver.jpg";
 import Testimonials from "./testimonials";
@@ -33,6 +35,24 @@ function Homepage() {
   };
 
   window.addEventListener("scroll", revealFunction);
+
+
+  // hover effect on telephone area
+
+    const tele = document.getElementById('telephone-container');
+    const handsett = document.getElementById ('handset-itself');
+
+  
+    tele.addEventListener('mouseenter', function () {
+      handsett.classList.add('hoverr');
+    });
+
+    tele.addEventListener('mouseleave', function () {
+      handsett.classList.remove('hoverr');
+    });
+
+
+
 
   return (
     <section className="homepage">
@@ -258,16 +278,18 @@ function Homepage() {
       <section className="contact-container">
 
         <div className="contact-text">
-          <h2>Insights into every <br/> <strong>detail</strong></h2>
-
+          <h2>Insights into every <br/> detail</h2>
+          <p>start your onboarding now.</p>
         </div>
         
-        <div className="telephone">
-
+        <div className="telephone" id="telephone-container">
+          <div className="handset"><img id="handset-itself" className="handset-img" src={handset}/></div>
+          <div className="landline"><img src={landline}/></div>
         </div>
 
       </section>
 
+      <FooterSection/>
 
 
     </section>
