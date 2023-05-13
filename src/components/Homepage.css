@@ -307,36 +307,54 @@
   /* Contact Area */
 
   .contact-container {
-    margin-top: 200px;
-    padding-top: 100px;
-    background-color: #F2F2F2;
-    height: 350px;
+    /* padding-top: 100px; */
+    /* background-color: #F2F2F2; */
+    background: linear-gradient(to right, #F2F2F2, #DFDFDF, #C9C9C9, #B4B4B4, #AAA8A8);
+
+    height: 450px;
+    width: 90%;
+    border-radius: 10px;
     display: flex;
-    gap: 50px;
-    padding: auto;
-    justify-content: space-around;
+    margin: 200px auto auto auto;
+    position: relative;
+  }
+
+  .contact-text {
+    margin: auto auto auto 100px;
   }
 
   .contact-text h2 {
     font-size: 4rem;
     margin: 0;
+    width: max-content;
+    word-wrap: normal;
   }
 
   .contact-text p {
     font-size: 15px;
+    color: #828080;
+    letter-spacing: 1.5px;
+  }
+
+  .contact-text button{
+    border-radius: 20px;
+    margin-top: 10px;
+    padding: 10px;
+    width: 150px;
   }
 
   .handset {
     padding-left: 180px;
     height: 150px;
+
   }
 
   .handset-img{
-    
     scale: 0.7;
     margin-top: -70px;
     transform: rotate(-90deg);
     transition: transform 0.5s ease-in-out;
+
   }
 
   .handset-img.hoverr {
@@ -347,9 +365,39 @@
 
   .landline {
     height: 200px;
+
   }
 
   .landline img {
     scale: 0.7;
     margin-top: -50px;
+    
+  }
+
+  #telephone-container {
+    border-radius: 10px;
+    margin: 50px auto auto -300px;
+    background: linear-gradient(to right, #C9C9C900, #B4B4B400, #AAA8A800);
+    /* background-color: #fff; */
+    padding-top: 20px;
+    height: 320px;
+    align-items: end;
+
+    top: -10px;
+    left: -10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .sticky-texts {
+    margin-left: 20px;
+    gap: 20px;
+    height: 36px;
+  }
+
+  .sticky-texts p {
+    /* background-color: #000; */
+    color: #fff;
+    border-radius: 5px;
+    font-size: smaller;
+    padding: 4px 10px 4px 10px;
   }

@@ -36,7 +36,8 @@ function Homepage() {
 
   window.addEventListener("scroll", revealFunction);
 
-
+//vanilla JS for phone animation
+  
   // hover effect on telephone area
 
   // const tele = document.querySelector('#telephone-container')
@@ -56,7 +57,7 @@ function Homepage() {
   // })
   
    
-  // test 
+  // for hover effect using react ref
 
 const teleRef = useRef(null)
 const handsetRef = useRef(null)
@@ -76,7 +77,6 @@ const handleMouseLeave = () => {
 
 
   
-
 
 
 
@@ -301,21 +301,29 @@ const handleMouseLeave = () => {
         </section>
       </section>
 
-      <Testimonials />
 
       <section className="contact-container">
 
         <div className="contact-text">
-          <h2>Insights into every <br/> detail</h2>
-          <p>start your onboarding now.</p>
+          <h2>Insights into every detail your <br/> company needs</h2>
+          <p>We'll help you see what makes your transport and logistics <br/> outfit tick. Get the best out of your human resources, and keep <br/> your vehicles at optimum performance.</p>
+          <Button className="contact-button-x" variant="contained">Get Started</Button>
         </div>
         
         <div ref={teleRef} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} id="telephone-container">
+          <div className="sticky-texts">
+          <p></p>
+          {/* <p></p> */}
+          </div>
+
           <div className="handset"><img ref={handsetRef}  id="handset-itself" className="handset-img" src={handset}/></div>
           <div className="landline"><img src={landline}/></div>
         </div>
 
       </section>
+
+      <Testimonials />
+
 
       <FooterSection/>
 
