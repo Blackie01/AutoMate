@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Navigation from "./Nav";
 import "./Homepage.css";
 import jumboImage from "../assets/jumbo.jpg";
@@ -39,17 +39,45 @@ function Homepage() {
 
   // hover effect on telephone area
 
-    const tele = document.getElementById('telephone-container');
-    const handsett = document.getElementById ('handset-itself');
+  // const tele = document.querySelector('#telephone-container')
+  // const handsett = document.querySelector('#handset-itself')
+  
+  // console.log(tele)
+  // console.log(handsett)
+  
+  // tele.addEventListener('mouseenter', function () {
+  //   console.log('Mouse entered the telephone container!');
+  //   handsett.classList.add('hoverr')
+  // })
+  
+  // tele.addEventListener('mouseleave', function () {
+  //   console.log('Mouse left the telephone container!');
+  //   handsett.classList.remove('hoverr')
+  // })
+  
+   
+  // test 
+
+const teleRef = useRef(null)
+const handsetRef = useRef(null)
+
+const handleMouseEnter = () => {
+  if(handsetRef.current) {
+    handsetRef.current.classList.add('hoverr')
+  }
+} 
+
+const handleMouseLeave = () => {
+  if(handsetRef.current) {
+    handsetRef.current.classList.remove ('hoverr')
+  }
+}
+ 
+
 
   
-    tele.addEventListener('mouseenter', function () {
-      handsett.classList.add('hoverr');
-    });
 
-    tele.addEventListener('mouseleave', function () {
-      handsett.classList.remove('hoverr');
-    });
+
 
 
 
@@ -282,8 +310,8 @@ function Homepage() {
           <p>start your onboarding now.</p>
         </div>
         
-        <div className="telephone" id="telephone-container">
-          <div className="handset"><img id="handset-itself" className="handset-img" src={handset}/></div>
+        <div ref={teleRef} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} id="telephone-container">
+          <div className="handset"><img ref={handsetRef}  id="handset-itself" className="handset-img" src={handset}/></div>
           <div className="landline"><img src={landline}/></div>
         </div>
 
