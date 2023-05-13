@@ -1,14 +1,19 @@
 import React from "react";
-import './footer.css';
+import "./footer.css";
 
-function FooterSection () {
+function FooterSection() {
+  return (
+    <footer className="footer-container">
 
-    return (
-        <footer className="footer-container">
-        <p>shall we begin</p>
-            </footer>
-    )
-
+        
+      <div className="resource-disclaimer">
+        <p> <strong>Disclaimer: </strong>
+            All media resources used for in developing this page are either AI-generated
+            or publicly available on Pexels and Google Images. 
+        </p>
+      </div>
+    </footer>
+  );
 }
 
 export default FooterSection;

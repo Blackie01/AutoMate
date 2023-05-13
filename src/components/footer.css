@@ -4,4 +4,17 @@
     background-color: #F2F2F2;
     
     margin-top: 100px;
+    
+}
+
+.resource-disclaimer {
+    font-size: 10px;
+    text-align: center;
+    height: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.resource-disclaimer p {
+    margin: auto;
 }
