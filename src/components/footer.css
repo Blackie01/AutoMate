@@ -2,9 +2,67 @@
     height: 400px;
     color: black;
     background-color: #F2F2F2;
-    
     margin-top: 100px;
-    
+}
+
+.footer-container-two {
+    width: 90%;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.footer-class-one {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.class-one-logo-container {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.class-one-logo {
+    height: 40px;
+    width: 40px;
+}
+
+.class-one-footer-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.class-one-right {
+
+}
+
+.class-one-right input {
+    height: 20px;
+    width: 150px;
+}
+
+.input-div {
+    margin-top: 15px;
+}
+
+form label {
+    font-size: smaller;
+}
+
+input::placeholder {
+    font-size: smaller;
+}
+
+.class-one-right button {
+    font-size: 12px;
+    margin-left: 10px;
+    border: none;
+    background-color: rgb(109, 171, 225, 0.5);
+    height: 20px;
+    width: 80px;
+    /* padding: 10px; */
+    border-radius: 5px;
 }
 
 .resource-disclaimer {
@@ -18,3 +76,4 @@
 .resource-disclaimer p {
     margin: auto;
 }
+

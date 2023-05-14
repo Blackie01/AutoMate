@@ -71,6 +71,8 @@
   font-size: smaller;
   border-bottom: 2px solid white;
   padding-bottom: 5px;
+  transition: border-color 0.5s ease;
+
 }
 
 .indicator-content:hover {
