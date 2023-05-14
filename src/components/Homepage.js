@@ -9,9 +9,6 @@ import driverImage from "../assets/driver.jpg";
 import Testimonials from "./testimonials";
 import FooterSection from "./footer";
 
-
-
-
 function Homepage() {
   // handling the scroll/animation effect of homepage second floor
 
@@ -36,51 +33,22 @@ function Homepage() {
 
   window.addEventListener("scroll", revealFunction);
 
-//vanilla JS for phone animation
-  
-  // hover effect on telephone area
-
-  // const tele = document.querySelector('#telephone-container')
-  // const handsett = document.querySelector('#handset-itself')
-  
-  // console.log(tele)
-  // console.log(handsett)
-  
-  // tele.addEventListener('mouseenter', function () {
-  //   console.log('Mouse entered the telephone container!');
-  //   handsett.classList.add('hoverr')
-  // })
-  
-  // tele.addEventListener('mouseleave', function () {
-  //   console.log('Mouse left the telephone container!');
-  //   handsett.classList.remove('hoverr')
-  // })
-  
-   
   // for hover effect using react ref
 
-const teleRef = useRef(null)
-const handsetRef = useRef(null)
+  const teleRef = useRef(null);
+  const handsetRef = useRef(null);
 
-const handleMouseEnter = () => {
-  if(handsetRef.current) {
-    handsetRef.current.classList.add('hoverr')
-  }
-} 
+  const handleMouseEnter = () => {
+    if (handsetRef.current) {
+      handsetRef.current.classList.add("hoverr");
+    }
+  };
 
-const handleMouseLeave = () => {
-  if(handsetRef.current) {
-    handsetRef.current.classList.remove ('hoverr')
-  }
-}
- 
-
-
-  
-
-
-
-
+  const handleMouseLeave = () => {
+    if (handsetRef.current) {
+      handsetRef.current.classList.remove("hoverr");
+    }
+  };
 
   return (
     <section className="homepage">
@@ -301,33 +269,48 @@ const handleMouseLeave = () => {
         </section>
       </section>
 
-
       <section className="contact-container">
-
         <div className="contact-text">
-          <h2>Insights into every detail your <br/> company needs</h2>
-          <p>We'll help you see what makes your transport and logistics <br/> outfit tick. Get the best out of your human resources, and keep <br/> your vehicles at optimum performance.</p>
-          <Button className="contact-button-x" variant="contained">Get Started</Button>
+          <h2>
+            Insights into every detail your <br /> company needs
+          </h2>
+          <p>
+            We'll help you see what makes your transport and logistics <br />{" "}
+            outfit tick. Get the best out of your human resources, and keep{" "}
+            <br /> your vehicles at optimum performance.
+          </p>
+          <Button className="contact-button-x" variant="contained">
+            Get Started
+          </Button>
         </div>
-        
-        <div ref={teleRef} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} id="telephone-container">
+
+        <div
+          ref={teleRef}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          id="telephone-container"
+        >
           <div className="sticky-texts">
-          <p></p>
-          {/* <p></p> */}
+            <p></p>
           </div>
 
-          <div className="handset"><img ref={handsetRef}  id="handset-itself" className="handset-img" src={handset}/></div>
-          <div className="landline"><img src={landline}/></div>
+          <div className="handset">
+            <img
+              ref={handsetRef}
+              id="handset-itself"
+              className="handset-img"
+              src={handset}
+            />
+          </div>
+          <div className="landline">
+            <img src={landline} />
+          </div>
         </div>
-
       </section>
 
       <Testimonials />
 
-
-      <FooterSection/>
-
-
+      <FooterSection />
     </section>
   );
 }

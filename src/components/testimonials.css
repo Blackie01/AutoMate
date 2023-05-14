@@ -71,12 +71,12 @@
   font-size: smaller;
   border-bottom: 2px solid white;
   padding-bottom: 5px;
-  transition: border-color 0.5s ease;
-
+  transition: transform 0.3s ease-in;
 }
 
 .indicator-content:hover {
   border-bottom-color: #000;
+  transform: scale(1.1);
 }
 
 .clickingImage {

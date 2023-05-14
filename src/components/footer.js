@@ -34,9 +34,10 @@ function FooterSection() {
           </div>
         </div>
 
+        <hr />
+
         <div className="resource-disclaimer">
-          <p>
-            {" "}
+          <p className="disclaimer">
             <strong>Disclaimer: </strong>
             All media resources used for in developing this page are either
             AI-generated or publicly available on Pexels and Google Images.

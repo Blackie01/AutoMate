@@ -1,79 +1,92 @@
 .footer-container {
-    height: 400px;
-    color: black;
-    background-color: #F2F2F2;
-    margin-top: 100px;
+  height: max-content;
+  color: black;
+  background-color: #f2f2f2;
+  margin-top: 100px;
 }
 
 .footer-container-two {
-    width: 90%;
-    margin: auto;
-    padding-top: 50px;
+  width: 90%;
+  margin: auto;
+  padding-top: 50px;
 }
 
 .footer-class-one {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 .class-one-logo-container {
-    display: flex;
-    align-items: center;
-    font-weight: bold;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
 }
 
 .class-one-logo {
-    height: 40px;
-    width: 40px;
+  height: 40px;
+  width: 40px;
+}
+
+.footer-class-one {
+  margin-bottom: 50px;
 }
 
 .class-one-footer-nav {
-    display: flex;
-    gap: 20px;
-}
-
-.class-one-right {
-
-}
-
-.class-one-right input {
-    height: 20px;
-    width: 150px;
-}
-
-.input-div {
-    margin-top: 15px;
+  display: flex;
+  gap: 20px;
+  font-size: smaller;
 }
 
 form label {
-    font-size: smaller;
+  font-size: smaller;
+}
+
+.class-one-right input {
+  height: 20px;
+  width: 150px;
+}
+
+.input-div {
+  margin-top: 15px;
 }
 
 input::placeholder {
-    font-size: smaller;
+  font-size: smaller;
 }
 
-.class-one-right button {
-    font-size: 12px;
-    margin-left: 10px;
-    border: none;
-    background-color: rgb(109, 171, 225, 0.5);
-    height: 20px;
-    width: 80px;
-    /* padding: 10px; */
-    border-radius: 5px;
+.input-div input {
+  border: none;
+}
+
+.input-div button {
+  font-size: 12px;
+  margin-left: 10px;
+  border: none;
+  background-color: rgb(109, 171, 225, 0.5);
+  height: 30px;
+  width: 80px;
+  border-radius: 5px;
+}
+
+hr {
+  border: 1px solid #d9d7d7;
 }
 
 .resource-disclaimer {
-    font-size: 10px;
-    text-align: center;
-    height: 30px;
-    display: flex;
-    justify-content: flex-end;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.resource-disclaimer p {
-    margin: auto;
+.disclaimer {
+  font-size: 10px;
+  text-align: center;
+  height: 30px;
 }
 
+.class-two-nav {
+  display: flex;
+  gap: 20px;
+  font-size: smaller;
+}
