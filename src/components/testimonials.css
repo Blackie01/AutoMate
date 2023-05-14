@@ -79,8 +79,13 @@
   transform: scale(1.1);
 }
 
+.indicator-content.active {
+  text-decoration: underline;
+  color: blue;
+}
+
 .clickingImage {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .clickingImage img {
@@ -88,5 +93,3 @@
   height: 50px;
   border-radius: 10px;
 }
-
-

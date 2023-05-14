@@ -99,7 +99,13 @@ function showUserContent(user) {
 }
 
 function Testimonials() {
+
+  // for the testimonials display
   const [selectedUser, setSelectedUser] = useState(users[0]);
+
+  // function to show current active testimonial
+
+  
 
   return (
     <main className="container">
