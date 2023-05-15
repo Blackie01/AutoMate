@@ -383,3 +383,10 @@
   font-size: smaller;
   padding: 4px 10px 4px 10px;
 }
+
+
+/* Responsiveness */
+
+@media  (max-width: 768px) {
+    
+}

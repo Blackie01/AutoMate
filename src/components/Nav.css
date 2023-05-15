@@ -35,3 +35,10 @@
     width: 90%;
     margin-bottom: 0;
 }
+
+
+/* Responsiveness */
+
+@media  (max-width: 768px) {
+    
+}
