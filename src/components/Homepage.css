@@ -420,7 +420,8 @@
       }
       
       .hero-text-area p {
-        margin-top: 0px;
+        margin-top: 0rem;
+        word-wrap: break-word;
       }
       
       .jumbo-text {
@@ -442,7 +443,7 @@
       .hero-first-floor {
         display: block;
         width: 90%; 
-        margin: -12rem 5% 4rem 5%;
+        margin: -9rem 5% 4rem 5%;
       }
 
       .--inner {
