@@ -40,5 +40,24 @@
 /* Responsiveness */
 
 @media  (max-width: 768px) {
+
+    .navigation {
+        position: sticky;
+    }
     
+    .overall-nav {
+        justify-content: unset;
+        padding: 0px 0px 0px 20px;
+    }
+    .middle-menu {
+        display: none;
+    }
+
+    .access-menu {
+        display: none;
+    }
+
+    .divide {
+        width: 100%;
+    }
 }
