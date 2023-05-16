@@ -421,7 +421,12 @@
       
       .hero-text-area p {
         margin-top: 0rem;
-        word-wrap: break-word;
+        /* word-wrap: break-word; */
+        width: 90%;
+      }
+
+      .breaking-point {
+        display: none;
       }
       
       .jumbo-text {

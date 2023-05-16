@@ -65,7 +65,7 @@ function Homepage() {
               Manage your fleet, <br /> like a pro.
             </h2>
             <p>
-              The number of vehicles don't matter, AutoMate provides all <br />{" "}
+              The number of vehicles don't matter, AutoMate provides all <br className="breaking-point"/>{" "}
               the tools you need to boost productivity
             </p>
 
