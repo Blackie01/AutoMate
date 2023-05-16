@@ -93,7 +93,7 @@ function Homepage() {
                 alt="driver-Image"
               />
 
-              <section className="jumbo-buttons">
+              <section id="pp-buttons" className="jumbo-buttons">
                 <Button variant="contained">Get a quote</Button>
                 <Button variant="outlined">Learn more</Button>
               </section>
@@ -105,12 +105,11 @@ function Homepage() {
           <section className="product-title-container">
             <h2 className="product-title">Products & Services</h2>
             <p className="product-title-subtext">
-              By trusting us with your fleet management, you enjoy the
-              following.
+              By trusting us with your fleet management, you enjoy unprecedented ease.
               <br />
               You just need to click a button.
             </p>
-            <hr className="products-hr" />
+            <hr id="x-product-hr" className="products-hr" />
           </section>
 
           <section className="products">
