@@ -405,7 +405,7 @@
 
     .group-1-for-bg-color {
         background-color: #f2f2f2;
-        padding-bottom: 6.1rem;
+        padding-bottom: 15rem;
         padding-top: 1px;
       }
       
@@ -442,9 +442,11 @@
       .hero-first-floor {
         display: block;
         width: 90%; 
-        margin: 4rem 5%;
+        margin: -12rem 5% 4rem 5%;
+      }
 
-
+      .--inner {
+        height: 45vh;
       }
 
 }
