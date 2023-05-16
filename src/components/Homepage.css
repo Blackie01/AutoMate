@@ -394,10 +394,10 @@
 /* Responsiveness */
 
 @media  (max-width: 768px) {
-
+/* 
     * {
         width: 100%;
-    }
+    } */
 
     .hero-image {
         display: none;
@@ -460,7 +460,6 @@
       }
 
       #pp-buttons {
-        width: ;
         margin: 14rem auto auto auto;
       }
 
@@ -490,8 +489,6 @@
         display: none;
       }
 
-
-
       .products {
         display: block;
         margin-bottom: 0px;
@@ -508,11 +505,33 @@
       .product-listing-title {
         margin-top: 0;
         font-size: 2.2rem;
-        color: #494949;
+      }
+
+
+      /* second floor */
+
+      .upcoming-products {
+        margin-top: 8rem;
       }
       
-      .product-listing-text {
-        margin-top: -20px;
+      .upt-container {
+        height: 8rem;
       }
+      
+      .upcoming-products-title {
+        font-size: 3rem;
+        padding-top: 1rem;
+      }
+      
+      .slide-text {
+        font-size: 1.5rem;
+      }
+      
+      .reveal.active {
+        transform: translateX(1rem);
+      }
+      
+      
+      
       
 }

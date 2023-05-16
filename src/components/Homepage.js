@@ -218,6 +218,8 @@ function Homepage() {
         </section>
       </section>
 
+      {/* numbers don't lie section */}
+
       <section className="numbers-dont-lie">
         <div className="numbers-title">
           <h2>The numbers don't lie, AutoMate works!</h2>
