@@ -290,7 +290,7 @@ function Homepage() {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
           id="telephone-container"
-        >
+         >
           <div className="sticky-texts">
             <p></p>
           </div>
