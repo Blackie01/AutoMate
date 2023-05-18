@@ -273,7 +273,7 @@ function Homepage() {
       <section className="contact-container">
         <div className="contact-text">
           <h2>
-            Insights into every detail your <br /> company needs
+            Insights into every detail your <br className="breaker-of-words" /> company needs
           </h2>
           <p>
             We'll help you see what makes your transport and logistics <br />{" "}
