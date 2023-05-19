@@ -395,14 +395,12 @@
 @media (max-width: 768px) {
   * {
     width: 100%;
-    overflow-x: hidden;
   }
 
   .fixed-contact-button {
     position: fixed;
     bottom: 2rem;
-    right: auto;
-    left: auto;
+  text-align: center;
     width: 80%;
     z-index: 1;
   }
