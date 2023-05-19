@@ -113,6 +113,7 @@ function Testimonials() {
         <h2>
           How clients use AutoMate for<br></br> better efficiency.
         </h2>
+
       </div>
 
       <section className="review-container">

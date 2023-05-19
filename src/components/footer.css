@@ -90,3 +90,20 @@ hr {
   gap: 20px;
   font-size: smaller;
 }
+
+
+@media (max-width: 768px) {
+
+  .footer-class-one {
+    display: block;
+  }
+
+  .class-one-right{
+    margin-top: 2rem;
+  }
+
+  .input-div input { 
+    width: 70%;
+  }
+
+}
