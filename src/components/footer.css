@@ -59,6 +59,10 @@ input::placeholder {
   border: none;
 }
 
+input:focus {
+  border-color: #000;
+}
+
 .input-div button {
   font-size: 12px;
   margin-left: 10px;
@@ -104,6 +108,14 @@ hr {
 
   .input-div input { 
     width: 70%;
+  }
+
+  input:focus {
+    border-color: #000;
+  }
+
+  .resource-disclaimer {
+    margin-bottom: 2rem;
   }
 
 }
