@@ -315,14 +315,15 @@
 }
 
 .contact-text {
-  margin: auto auto auto 100px;
+  margin: auto 0 auto 100px;
+  width: 50%;
 }
 
 .contact-text h2 {
   font-size: 4rem;
   margin: 0;
-  width: max-content;
-  word-wrap: normal;
+  width: 100%;
+  word-wrap: break-word;
 }
 
 .contact-text p {
@@ -366,12 +367,11 @@
 
 #telephone-container {
   border-radius: 10px;
-  margin: 50px auto auto -300px;
+  margin: 4rem 7rem auto auto;
   background: linear-gradient(to right, #c9c9c900, #b4b4b400, #aaa8a800);
   padding-top: 20px;
   height: 320px;
   align-items: end;
-
   top: -10px;
   left: -10px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
