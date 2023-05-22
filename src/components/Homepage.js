@@ -66,7 +66,7 @@ function Homepage() {
             </h2>
             <p>
               The number of vehicles don't matter, AutoMate provides all <br className="breaking-point"/>{" "}
-              the tools you need to boost productivity
+              the tools you need to boost productivity.
             </p>
 
             <section className="jumbo-buttons">
