@@ -8,6 +8,7 @@ import Button from "@mui/material/Button";
 import driverImage from "../assets/driver.jpg";
 import Testimonials from "./testimonials";
 import FooterSection from "./footer";
+import { Link } from "react-router-dom";
 
 function Homepage() {
   // handling the scroll/animation effect of homepage second floor

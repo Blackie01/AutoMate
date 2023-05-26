@@ -1,6 +1,7 @@
 import React from "react";
 import "./Nav.css";
 import Button from "@mui/material/Button";
+import { NavLink } from "react-router-dom";
 
 function Navigation() {
 
@@ -38,7 +39,14 @@ function Navigation() {
 
         <section className="access-menu">
           <div>Log in</div>
+
+          <NavLink to="/signup"
+          style={({isActive}) => isActive ? {color:"yellow"} : {color: "green"} }
+          >
           <Button variant="outlined">Sign Up</Button>
+
+
+          </NavLink>
         </section>
       </section>
       <hr className="divide" />
