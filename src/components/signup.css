@@ -4,16 +4,14 @@
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .center-container {
     display: flex;
     width: 60%;
-    margin: auto;
     background-color: #fff;
     border-radius: 15px;
-
-
 }
 
 .left-div {
@@ -27,6 +25,9 @@
 }
 
 .logo-span-signup {
+    display: flex;
+    margin: 0 0 2rem 0;
+    width: max-content;
     transition: transform 0.3s ease-in;
 }
 
@@ -81,4 +82,74 @@ form input {
 
 .right-div p {
     font-size: smaller;
+}
+
+
+@media (max-width: 768px) {
+
+    .overall-signup-page {
+        background-color: unset;
+        height: 100%;
+        display: block;
+        overflow: hidden;
+    }
+    
+    .center-container {
+        display: block;
+        width: 100%;
+        border-radius: none;
+    }
+    
+    .left-div {
+        background-color: #b6f1dd;
+        height: 100%;
+        width: 100%;
+        padding: 2rem 0 2rem 1rem;
+        border-top-left-radius: unset;
+        border-bottom-left-radius: unset;
+    }
+
+    .logo-span-signup {
+        margin-left: -0.1rem;
+    }
+
+    .individual-signup-detail-box {
+        gap: 1rem;
+        padding-left: 0.5rem;
+    }
+
+    .individual-signup-detail-box p{
+        display: none;
+    }
+
+    .numerical-count {
+        width: max-content;
+    }
+
+    .signup-textuals h2 {
+        font-size: medium;
+    }
+
+    .contact-support {
+        padding-left: 0.5rem;
+    }
+
+    .right-div {
+        padding: 1.5rem;
+    }
+    
+    form {
+        width: 85%;
+    }
+    
+    form input {
+     width: 94%;
+    }
+
+    form input:focus {
+        border-color: blue;
+    }
+
+
+
 }

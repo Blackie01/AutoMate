@@ -14,6 +14,14 @@
     /* position: sticky; */
 }
 
+#transform-logo {
+    transition: transform 0.3s ease-in;
+}
+
+#transform-logo:hover {
+    transform: scale(1.1);
+}
+
 .middle-menu {
     width: 35%;
 }
@@ -24,10 +32,26 @@
     list-style-type: none;
 }
 
+.middle-menu li {
+    cursor: pointer;
+}
+
+.middle-menu li:hover {
+    font-weight: bolder;
+}
+
 .access-menu {
     display: flex;
     gap: 30px;
     align-items: center;
+}
+
+#login-button {
+    cursor: pointer;
+}
+
+#login-button:hover {
+    font-weight: bolder;
 }
 
 .divide {

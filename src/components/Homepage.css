@@ -310,12 +310,13 @@
   width: 90%;
   border-radius: 10px;
   display: flex;
-  margin: 200px auto auto auto;
+  margin: auto;
   position: relative;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .contact-text {
-  margin: auto 0 auto 100px;
   width: 50%;
 }
 
@@ -339,6 +340,14 @@
   width: 150px;
 }
 
+#telephone-container {
+  border-radius: 10px;
+  background: linear-gradient(to right, #c9c9c900, #b4b4b400, #aaa8a800);
+  padding-top: 20px;
+  height: 320px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
 .handset {
   padding-left: 180px;
   height: 150px;
@@ -357,24 +366,12 @@
 }
 
 .landline {
-  height: 200px;
+  margin-top: -50px;
 }
 
 .landline img {
   scale: 0.7;
-  margin-top: -50px;
-}
-
-#telephone-container {
-  border-radius: 10px;
-  margin: 4rem 7rem auto auto;
-  background: linear-gradient(to right, #c9c9c900, #b4b4b400, #aaa8a800);
-  padding-top: 20px;
-  height: 320px;
-  align-items: end;
-  top: -10px;
-  left: -10px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: -2rem;
 }
 
 .sticky-texts {
@@ -398,14 +395,8 @@
   }
 
   .fixed-contact-button {
-    position: fixed;
-    bottom: 1rem;
-  text-align: center;
-    width: 80%;
-    z-index: 1;
+    display: none;
   }
-  
-  
 
   .hero-image {
     display: none;
@@ -560,23 +551,22 @@
   }
 
   .vertical::before {
-    content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    to bottom,
-    #f2f2f2,
-    #dfdfdf,
-    #c9c9c9,
-    #b4b4b4,
-    #aaa8a8
-  );
-  animation: gradientFlow 2s cubic-bezier(0.42, 0, 0.58, 1) infinite;
-  transform-origin: top;
-
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      #f2f2f2,
+      #dfdfdf,
+      #c9c9c9,
+      #b4b4b4,
+      #aaa8a8
+    );
+    animation: gradientFlow 2s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+    transform-origin: top;
   }
 
   @keyframes gradientFlow {
@@ -587,7 +577,6 @@
       transform: scaleY(1);
     }
   }
-
 
   /* contact area */
 
@@ -600,20 +589,20 @@
       #b4b4b4,
       #aaa8a8
     );
-  
+
     height: max-content;
     width: 95%;
     padding-top: 4rem;
     padding-bottom: 4rem;
   }
-  
+
   .contact-text {
     width: 90%;
     height: 100%;
     margin: 20px;
     text-align: center;
   }
-  
+
   .contact-text h2 {
     font-size: 2.2rem;
     max-width: 100%;
@@ -622,7 +611,7 @@
   .breaker-of-words {
     display: none;
   }
-  
+
   .contact-text p {
     font-size: 0.9rem;
   }
@@ -630,5 +619,4 @@
   #telephone-container {
     display: none;
   }
-
 }

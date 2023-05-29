@@ -38,12 +38,21 @@
   font-size: smaller;
 }
 
+.class-one-footer-nav p {
+  cursor: pointer;
+}
+
+.class-one-footer-nav p:hover {
+  font-weight: bold;
+
+}
+
 form label {
   font-size: smaller;
 }
 
 .class-one-right input {
-  height: 20px;
+  height: 1.8rem;
   width: 150px;
 }
 
@@ -63,7 +72,7 @@ input:focus {
   border-color: #000;
 }
 
-.input-div button {
+#footer-message-button {
   font-size: 12px;
   margin-left: 10px;
   border: none;
@@ -71,6 +80,7 @@ input:focus {
   height: 30px;
   width: 80px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 hr {

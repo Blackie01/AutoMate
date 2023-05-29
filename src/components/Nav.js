@@ -1,7 +1,9 @@
 import React from "react";
 import "./Nav.css";
 import Button from "@mui/material/Button";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import logo from "../assets/logo.png";
+
 
 function Navigation() {
 
@@ -24,9 +26,15 @@ function Navigation() {
   return (
     <nav className="navigation">
       <section className="overall-nav">
-        <section className="logo-menu">
-          <p>AutoMate</p>
-        </section>
+        <Link style={{textDecoration: 'none', color:'black'}}>
+        {/* The styling for this is in the footer.css file, cos the code block was 
+        was copied from footer.js */}
+        <div id="transform-logo" className="class-one-logo-container">
+              <img className="class-one-logo" src={logo} />
+              <p>AutoMate</p>
+        </div>
+        </Link>
+        
 
         <section className="middle-menu">
           <ul>
@@ -38,7 +46,7 @@ function Navigation() {
         </section>
 
         <section className="access-menu">
-          <div>Log in</div>
+          <div id="login-button">Log in</div>
 
           <NavLink to="/signup"
           style={({isActive}) => isActive ? {color:"yellow"} : {color: "green"} }

@@ -28,7 +28,7 @@ function FooterSection() {
 
               <div className="input-div">
                 <input type="text" placeholder="What do you need?" />
-                <button>Message</button>
+                <input id="footer-message-button" type="button" value="Message"/>
               </div>
             </form>
           </div>
