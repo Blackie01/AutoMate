@@ -12,15 +12,27 @@
     margin: auto;
     background-color: #fff;
     border-radius: 15px;
+
+
 }
 
 .left-div {
-    background-color: rgb(182, 241, 221);
+    background-color: #b6f1dd;
     height: 100%;
     width: 50%;
     padding: 4rem;
     font-size: smaller;
-    border-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.logo-span-signup {
+    transition: transform 0.3s ease-in;
+}
+
+.logo-span-signup:hover {
+    color: #5b5959;
+    transform: scale(1.1);
 }
 
 .individual-signup-detail-box {
@@ -60,6 +72,11 @@ form input {
 
 .button-on-signup-page {
     width: 100%;
+    transition: background-color 0.3 ease;
+}
+
+.button-on-signup-page:hover {
+    background-color: rgb(228, 248, 242);
 }
 
 .right-div p {

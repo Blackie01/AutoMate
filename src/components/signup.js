@@ -4,12 +4,21 @@ import "./signup.css"
 import { Link } from "react-router-dom";
 
 function Signup() {
+
+    function displayTest () {
+        let pswrd = document.getElementById("passworded").value;
+        console.log(pswrd)
+            document.getElementsByClassName("display-error").innerHTML = pswrd;
+    }
+
+
+
   return (
     <section className="overall-signup-page">
       <section className="center-container">
         <div className="left-div">
             <Link to="/" style={{textDecoration:'none', color:'inherit'}}>
-            <span style={{display: 'flex', margin:"0 0 2rem 0", width:'max-content'}}>
+            <span className="logo-span-signup" style={{display: 'flex', margin:"0 0 2rem 0", width:'max-content'}}>
             <img className="class-one-logo" src={logo} />
             <p>AutoMate</p>
           </span>
@@ -49,16 +58,18 @@ function Signup() {
           </div>
 
           <div className="contact-support">
-            More questions? Contact support.
+            More questions? <span style={{color: "#646208", textDecoration: "underline"}}>Contact support.</span>
           </div>
         </div>
 
         <div className="right-div">
-            <h3>Register your fleet.</h3>
+            <h3>Register your company.</h3>
             <form>
-                <input type="text" placeholder="Company Name"/>
-                <input type="email" placeholder="Company Email"/>
-                <input className="button-on-signup-page" type="submit" value="Continue"/>
+                <input type="text" placeholder="Company name" required/>
+                <input type="email" placeholder="Company email" required/>
+                <input id="passworded" type="password" placeholder="Create password" required/>
+                <p className="display-error"></p>
+                <input onClick={displayTest} className="button-on-signup-page" type="submit" value="Continue"/>
             </form>
 
             <div className="signup-with-google"></div>
