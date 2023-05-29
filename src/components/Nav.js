@@ -4,37 +4,47 @@ import Button from "@mui/material/Button";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/logo.png";
 
-
 function Navigation() {
+  document.addEventListener("DOMContentLoaded", function () {
+    const dividerr = document.querySelector(".divide");
 
-  document.addEventListener('DOMContentLoaded', function() {
-    const dividerr = document.querySelector('.divide');
-  
-    window.addEventListener('scroll', function() {
+    window.addEventListener("scroll", function () {
       // Check if the user has scrolled past the top of the navigation
       if (window.pageYOffset > 2) {
         // If so, hide the <hr> element
-        dividerr.style.display = 'none';
+        dividerr.style.display = "none";
       } else {
         // If not, show the <hr> element
-        dividerr.style.display = 'block';
+        dividerr.style.display = "block";
       }
     });
   });
-  
-        
+
+  function displayMenu () {
+    return (
+      <section className="mobileMenu">
+         <ul>
+            <li>Features</li>
+            <li>Company</li>
+            <li>Solutions</li>
+            <li>Case Study</li>
+          </ul>
+
+      </section>
+    )
+  };
+
   return (
     <nav className="navigation">
       <section className="overall-nav">
-        <Link style={{textDecoration: 'none', color:'black'}}>
-        {/* The styling for this is in the footer.css file, cos the code block was 
+        <Link style={{ textDecoration: "none", color: "black" }}>
+          {/* The styling for this is in the footer.css file, cos the code block was 
         was copied from footer.js */}
-        <div id="transform-logo" className="class-one-logo-container">
-              <img className="class-one-logo" src={logo} />
-              <p>AutoMate</p>
-        </div>
+          <div id="transform-logo" className="class-one-logo-container">
+            <img className="class-one-logo" src={logo} />
+            <p>AutoMate</p>
+          </div>
         </Link>
-        
 
         <section className="middle-menu">
           <ul>
@@ -48,15 +58,23 @@ function Navigation() {
         <section className="access-menu">
           <div id="login-button">Log in</div>
 
-          <NavLink to="/signup"
-          style={({isActive}) => isActive ? {color:"yellow"} : {color: "green"} }
+          <NavLink
+            to="/signup"
+            style={({ isActive }) =>
+              isActive ? { color: "yellow" } : { color: "green" }
+            }
           >
-          <Button variant="outlined">Sign Up</Button>
-
-
+            <Button variant="outlined">Sign Up</Button>
           </NavLink>
         </section>
+
+        <div className="hamburger-menu" onClick={displayMenu}>
+          <div className="line"></div>
+          <div className="line"></div>
+          <div className="line"></div>
+        </div>
       </section>
+
       <hr className="divide" />
     </nav>
   );

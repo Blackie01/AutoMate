@@ -60,6 +60,11 @@
     margin-bottom: 0;
 }
 
+.hamburger-menu {
+
+    display: none;
+}
+
 
 /* Responsiveness */
 
@@ -71,8 +76,26 @@
     
     .overall-nav {
         justify-content: unset;
-        padding: 0px 0px 0px 20px;
+        padding: 0px 20px 0px 20px;
     }
+
+    .hamburger-menu {
+        display: flex;
+        width: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.2rem;
+        margin-right: 3rem;
+    }
+
+    .line {
+        background-color: #000;
+        height: 0.2rem;
+        width: 100%;
+    }
+
     .middle-menu {
         display: none;
     }
@@ -83,5 +106,10 @@
 
     .divide {
         width: 100%;
+    }
+
+    .mobileMenu {
+        display: block;
+        height: 100vh;
     }
 }
