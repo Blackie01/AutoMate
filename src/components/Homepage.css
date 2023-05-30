@@ -13,6 +13,7 @@
   background-color: #f2f2f2;
   padding-bottom: 100px;
   padding-top: 1px;
+
 }
 
 .hero {
@@ -82,6 +83,7 @@
   justify-content: space-around;
   gap: 150px;
   min-height: 100vh;
+
 }
 
 .hero-first-floor-image {
@@ -181,6 +183,7 @@
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
   margin-top: 200px;
+
 }
 
 .upt-container {
@@ -249,6 +252,7 @@
 .numbers-dont-lie {
   margin: 200px 50px 150px 50px;
   text-align: center;
+
 }
 
 .numbers-title {
@@ -305,6 +309,7 @@
     #b4b4b4,
     #aaa8a8
   );
+
 
   height: 450px;
   width: 90%;
