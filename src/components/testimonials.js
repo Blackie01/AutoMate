@@ -23,7 +23,7 @@ const users = [
 
   {
     id: 2,
-    name: "Gbenga Ajibade",
+    name: "Gbenga Oyedele",
     company: "Gbenga Motors",
     logo: "https://images.pexels.com/photos/1337380/pexels-photo-1337380.jpeg?auto=compress&cs=tinysrgb&w=800",
     userImage: gbenga,
