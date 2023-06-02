@@ -1,30 +1,27 @@
-import React from "react";
+import React, { useState }from "react";
 import "./Nav.css";
 import Button from "@mui/material/Button";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 function Navigation() {
-  document.addEventListener("DOMContentLoaded", function () {
-    const dividerr = document.querySelector(".divide");
 
-    window.addEventListener("scroll", function () {
-      // Check if the user has scrolled past the top of the navigation
-      if (window.pageYOffset > 2) {
-        // If so, hide the <hr> element
-        dividerr.style.display = "none";
-      } else {
-        // If not, show the <hr> element
-        dividerr.style.display = "block";
-      }
-    });
-  });
 
+  const [isOpen, setIsOpen] = useState(false);
+  const openMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <nav className="navigation">
       <section className="overall-nav">
-        <Link style={{ textDecoration: "none", color: "black" }}>
+        <Link
+          style={{
+            width: "max-content",
+            textDecoration: "none",
+            color: "black",
+          }}
+        >
           {/* The styling for this is in the footer.css file, cos the code block was 
         was copied from footer.js */}
           <div id="transform-logo" className="class-one-logo-container">
@@ -55,15 +52,25 @@ function Navigation() {
           </NavLink>
         </section>
 
+        <div className="hamburger-menu" onClick={openMenu}>
+          <div className="line"></div>
+          <div className="line"></div>
+          <div className="line"></div>
+        </div>
 
-        <button className="hamburger-menu" onClick={displayMenu}>
-          <div className="line"></div>
-          <div className="line"></div>
-          <div className="line"></div>
-        </button>
+        <div className={`mobile-menu ${isOpen ? "open" : ""}`}>
+        <ul>
+          <li>go home</li>
+          <li>Company</li>
+          <li>Solutions</li>
+          <li>Case Study</li>
+        </ul>
+      </div>
       </section>
 
       <hr className="divide" />
+
+     
     </nav>
   );
 }

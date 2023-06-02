@@ -59,15 +59,19 @@ function Homepage() {
         <Button variant="contained">Contact Us</Button>
       </div>
 
+    
+
       <section className="group-1-for-bg-color">
+     
         <section className="hero">
           <section className="hero-text-area">
             <h2 className="jumbo-text">
               Manage your fleet, <br /> like a pro.
             </h2>
             <p>
-              The number of vehicles don't matter, AutoMate provides all <br className="breaking-point"/>{" "}
-              the tools you need to boost productivity.
+              The number of vehicles don't matter, AutoMate provides all{" "}
+              <br className="breaking-point" /> the tools you need to boost
+              productivity.
             </p>
 
             <section className="jumbo-buttons">
@@ -106,7 +110,8 @@ function Homepage() {
           <section className="product-title-container">
             <h2 className="product-title">Products & Services</h2>
             <p className="product-title-subtext">
-              By trusting us with your fleet management, you enjoy unprecedented ease.
+              By trusting us with your fleet management, you enjoy unprecedented
+              ease.
               <br />
               You just need to click a button.
             </p>
@@ -273,9 +278,7 @@ function Homepage() {
 
       <section className="contact-container">
         <div className="contact-text">
-          <h2>
-            Insights into your business needs
-          </h2>
+          <h2>Insights into your business needs</h2>
           <p>
             We'll help you see what makes your transport and logistics <br />{" "}
             outfit tick. Get the best out of your human resources, and keep{" "}
@@ -291,7 +294,7 @@ function Homepage() {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
           id="telephone-container"
-         >
+        >
           <div className="sticky-texts">
             <p></p>
           </div>

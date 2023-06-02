@@ -14,6 +14,7 @@
 }
 
 #transform-logo {
+    width: max-content;
     transition: transform 0.3s ease-in;
 }
 
@@ -64,6 +65,17 @@
     display: none;
 }
 
+.mobile-menu {
+    display: none;
+  background-color: #f1f1f1;
+  padding: 20px;
+  /* position: absolute; */
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
 
 /* Responsiveness */
 
@@ -74,7 +86,6 @@
     }
     
     .overall-nav {
-        justify-content: unset;
         padding: 0px 20px 0px 20px;
     }
 
@@ -87,6 +98,7 @@
         align-items: center;
         gap: 0.2rem;
         margin-right: 3rem;
+        position: relative;
     }
 
     .line {
@@ -94,6 +106,12 @@
         height: 0.2rem;
         width: 100%;
     }
+
+
+
+
+
+
 
     .middle-menu {
         display: none;
@@ -107,8 +125,16 @@
         width: 100%;
     }
 
-    .mobileMenu {
+    .mobile-menu {
+        display: none;
+    }
+  
+
+    .open .mobile-menu {
         display: block;
-        height: 100vh;
+        /* height: 100vh;
+        background-color: #F2F2F2;
+        z-index: 1;
+        position: absolute; */
     }
 }
