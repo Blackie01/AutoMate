@@ -53,6 +53,16 @@
     margin-top: 2rem;
 }
 
+.contact-support span {
+    color: #646208;
+    text-decoration: underline;
+}
+
+.contact-support span:hover {
+    cursor: pointer;
+    color: #000;
+}
+
 .right-div {
     padding: 2rem;
     margin: auto;

@@ -57,7 +57,7 @@ function Signup() {
 
           <div className="contact-support">
             More questions?{" "}
-            <span style={{ color: "#646208", textDecoration: "underline" }}>
+            <span>
               Contact support.
             </span>
           </div>

@@ -20,19 +20,6 @@ function Navigation() {
     });
   });
 
-  function displayMenu () {
-    return (
-      <section className="mobileMenu">
-         <ul>
-            <li>Features</li>
-            <li>Company</li>
-            <li>Solutions</li>
-            <li>Case Study</li>
-          </ul>
-
-      </section>
-    )
-  };
 
   return (
     <nav className="navigation">
@@ -68,11 +55,12 @@ function Navigation() {
           </NavLink>
         </section>
 
-        <div className="hamburger-menu" onClick={displayMenu}>
+
+        <button className="hamburger-menu" onClick={displayMenu}>
           <div className="line"></div>
           <div className="line"></div>
           <div className="line"></div>
-        </div>
+        </button>
       </section>
 
       <hr className="divide" />
