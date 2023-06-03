@@ -4,13 +4,7 @@ import Button from "@mui/material/Button";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/logo.png";
 
-function Navigation() {
-
-  const [isOpen, setIsOpen] = useState(false)
-  const openMenu = () => {
-    setIsOpen(!isOpen)
-  };
-  
+function Navigation( { openMenu}) {
 
   return (
     <nav className="navigation">
@@ -62,28 +56,6 @@ function Navigation() {
       </section>
 
       <hr className="divide" />
-
-      <div className={`mobile-menu ${isOpen ? "open" : ""}`}>
-        
-        <div>Features</div>
-        <div>Company</div>
-        <div>Solutions</div>
-        <div>Case Study</div>
-
-        <section className="mobile-access-menu">
-          <div id="mobile-login-button">Log in</div>
-
-          <NavLink
-            to="/signup"
-            style={({ isActive }) =>
-              isActive ? { color: "yellow" } : { color: "green" }
-            }
-          >
-            <Button variant="outlined">Sign Up</Button>
-          </NavLink>
-        </section>
-
-      </div>
      
     </nav>
   );

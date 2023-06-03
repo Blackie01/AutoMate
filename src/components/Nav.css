@@ -87,7 +87,6 @@
         gap: 0.2rem;
         margin-right: 3rem;
         position: relative;
-        border: 1px solid red;
     }
 
     .line {
@@ -107,12 +106,38 @@
     .divide {
         width: 100%;
     }
-      
-    .open {
-        display: block;
-        color: red;
+
+    /* this is style for mobile menu embedded in Homepage.js */
+    .mobile-menu {
+        color: #000;
+
+        width: 100vw;
         height: 100vh;
-        background-color: #b6f1dd;
+        background-color: #F2F2F2;
         z-index: 1;
+        /* position: fixed; */
+
+    }
+
+    .mobile-access-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        width: 70%;
+        margin: 0 auto;
+    }
+      
+    /* this is the open class added to the hamburger menu */
+    .open {
+        display: flex;
+        flex-direction: column;
+        left: 0;
+        text-align: center;
+        gap: 0.8rem;
+        padding-top: 10rem;
+        font-size: larger;
       }
+
+      
+
 }

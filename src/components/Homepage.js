@@ -8,7 +8,7 @@ import Button from "@mui/material/Button";
 import driverImage from "../assets/driver.jpg";
 import Testimonials from "./testimonials";
 import FooterSection from "./footer";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Homepage() {
   // handling the scroll/animation effect of homepage second floor
@@ -34,7 +34,7 @@ function Homepage() {
 
   window.addEventListener("scroll", revealFunction);
 
-  // for hover effect using react ref
+  // for the animation of the telephone in the contact area
 
   const teleRef = useRef(null);
   const handsetRef = useRef(null);
@@ -51,18 +51,54 @@ function Homepage() {
     }
   };
 
-  
+  //
+
+  // state management for the hamburger menu
+  const [isOpen, setIsOpen] = useState(false);
+  const openMenu = () => {
+    setIsOpen(!isOpen);
+    if (!isOpen) {
+      document.querySelector(".homepage").style.position = "fixed";
+    } else {
+      document.querySelector(".homepage").style.position = "unset";
+    }
+  };
+
+  //
 
   return (
     <section className="homepage">
-      <Navigation />
+      <Navigation isOpen={isOpen} openMenu={openMenu} />
+
+      {/* hamburger menu */}
+      
+      <div className={`mobile-menu ${isOpen ? "open" : ""}`}>
+        <div>Features</div>
+        <div>Company</div>
+        <div>Solutions</div>
+        <div>Case Study</div>
+
+        <section className="mobile-access-menu">
+          <div id="mobile-login-button">Log in</div>
+
+          <NavLink
+            to="/signup"
+            style={({ isActive }) =>
+              isActive ? { color: "yellow" } : { color: "green" }
+            }
+          >
+            <Button variant="outlined">Sign Up</Button>
+          </NavLink>
+        </section>
+      </div>
+
+      {/* hamburger menu ends here */}
 
       <div className="fixed-contact-button">
         <Button variant="contained">Contact Us</Button>
       </div>
 
       <section className="group-1-for-bg-color">
-     
         <section className="hero">
           <section className="hero-text-area">
             <h2 className="jumbo-text">
