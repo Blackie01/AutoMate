@@ -1,7 +1,6 @@
 .navigation {
-    position: sticky;
+    position: relative;
     top: 0;  
-    z-index: 1;
     margin-bottom: 0;
     background-color: #F2F2F2;
 }
@@ -10,7 +9,7 @@
     display: flex;
     justify-content: space-between;
     padding: 20px 80px 0 80px;  
-    /* position: sticky; */
+    position: sticky;
 }
 
 #transform-logo {
@@ -67,23 +66,12 @@
 
 .mobile-menu {
     display: none;
-  background-color: #f1f1f1;
-  padding: 20px;
-  /* position: absolute; */
-  top: 100%;
-  left: 0;
-  width: 100%;
-  z-index: 1;
 }
 
 
 /* Responsiveness */
 
 @media  (max-width: 768px) {
-
-    .navigation {
-        position: sticky;
-    }
     
     .overall-nav {
         padding: 0px 20px 0px 20px;
@@ -99,6 +87,7 @@
         gap: 0.2rem;
         margin-right: 3rem;
         position: relative;
+        border: 1px solid red;
     }
 
     .line {
@@ -124,17 +113,13 @@
     .divide {
         width: 100%;
     }
-
-    .mobile-menu {
-        display: none;
-    }
-  
-
-    .open .mobile-menu {
+      
+    .open {
         display: block;
-        /* height: 100vh;
-        background-color: #F2F2F2;
+        color: red;
+        /* position: fixed; */
+        height: 100vh;
+        background-color: #b6f1dd;
         z-index: 1;
-        position: absolute; */
-    }
+      }
 }

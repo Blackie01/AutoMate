@@ -6,11 +6,11 @@ import logo from "../assets/logo.png";
 
 function Navigation() {
 
-
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
   const openMenu = () => {
-    setIsOpen(!isOpen);
+    setIsOpen(!isOpen)
   };
+  
 
   return (
     <nav className="navigation">
@@ -58,18 +58,32 @@ function Navigation() {
           <div className="line"></div>
         </div>
 
-        <div className={`mobile-menu ${isOpen ? "open" : ""}`}>
-        <ul>
-          <li>go home</li>
-          <li>Company</li>
-          <li>Solutions</li>
-          <li>Case Study</li>
-        </ul>
-      </div>
+        
       </section>
 
       <hr className="divide" />
 
+      <div className={`mobile-menu ${isOpen ? "open" : ""}`}>
+        
+        <div>Features</div>
+        <div>Company</div>
+        <div>Solutions</div>
+        <div>Case Study</div>
+
+        <section className="mobile-access-menu">
+          <div id="mobile-login-button">Log in</div>
+
+          <NavLink
+            to="/signup"
+            style={({ isActive }) =>
+              isActive ? { color: "yellow" } : { color: "green" }
+            }
+          >
+            <Button variant="outlined">Sign Up</Button>
+          </NavLink>
+        </section>
+
+      </div>
      
     </nav>
   );

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Navigation from "./Nav";
 import "./Homepage.css";
 import jumboImage from "../assets/jumbo.jpg";
@@ -51,6 +51,8 @@ function Homepage() {
     }
   };
 
+  
+
   return (
     <section className="homepage">
       <Navigation />
@@ -58,8 +60,6 @@ function Homepage() {
       <div className="fixed-contact-button">
         <Button variant="contained">Contact Us</Button>
       </div>
-
-    
 
       <section className="group-1-for-bg-color">
      
