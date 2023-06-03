@@ -96,12 +96,6 @@
         width: 100%;
     }
 
-
-
-
-
-
-
     .middle-menu {
         display: none;
     }
@@ -117,7 +111,6 @@
     .open {
         display: block;
         color: red;
-        /* position: fixed; */
         height: 100vh;
         background-color: #b6f1dd;
         z-index: 1;
