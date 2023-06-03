@@ -59,8 +59,14 @@ function Homepage() {
     setIsOpen(!isOpen);
     if (!isOpen) {
       document.querySelector(".homepage").style.position = "fixed";
+      document.querySelector("#line1").style.transform = "translate(6px, 8px) rotate(45deg)"
+      document.querySelector("#line2").style.opacity = "0"
+      document.querySelector("#line3").style.transform = "translate(5px, -5px) rotate(-45deg)"
     } else {
       document.querySelector(".homepage").style.position = "unset";
+      document.querySelector("#line1").style.transform = "unset"
+      document.querySelector("#line2").style.opacity = "unset"
+      document.querySelector("#line3").style.transform = "unset"
     }
   };
 
@@ -71,7 +77,7 @@ function Homepage() {
       <Navigation isOpen={isOpen} openMenu={openMenu} />
 
       {/* hamburger menu */}
-      
+
       <div className={`mobile-menu ${isOpen ? "open" : ""}`}>
         <div>Features</div>
         <div>Company</div>
@@ -79,7 +85,8 @@ function Homepage() {
         <div>Case Study</div>
 
         <section className="mobile-access-menu">
-          <div id="mobile-login-button">Log in</div>
+
+          <Button variant="contained" id="mobile-login-button">Log in</Button>
 
           <NavLink
             to="/signup"
@@ -111,7 +118,7 @@ function Homepage() {
             </p>
 
             <section className="jumbo-buttons">
-              <Button variant="outlined">Get Started</Button>
+              <NavLink to="/signup"><Button variant="outlined">Get Started</Button></NavLink>
               <Button variant="contained">Download App</Button>
             </section>
           </section>

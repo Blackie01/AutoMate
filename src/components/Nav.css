@@ -79,7 +79,7 @@
 
     .hamburger-menu {
         display: flex;
-        width: 2rem;
+        width: 1.5rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -93,6 +93,7 @@
         background-color: #000;
         height: 0.2rem;
         width: 100%;
+        transition: 0.4s;
     }
 
     .middle-menu {
@@ -115,7 +116,9 @@
         height: 100vh;
         background-color: #F2F2F2;
         z-index: 1;
+        bottom: 100vh;
         /* position: fixed; */
+        transition: 2s;
 
     }
 
@@ -124,20 +127,20 @@
         flex-direction: column;
         gap: 0.8rem;
         width: 70%;
-        margin: 0 auto;
+        margin: 2rem auto;
     }
       
     /* this is the open class added to the hamburger menu */
     .open {
         display: flex;
         flex-direction: column;
-        left: 0;
+        bottom: 0;
         text-align: center;
         gap: 0.8rem;
         padding-top: 10rem;
         font-size: larger;
       }
 
-      
+
 
 }

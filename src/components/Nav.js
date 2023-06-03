@@ -47,9 +47,9 @@ function Navigation( { openMenu}) {
         </section>
 
         <div className="hamburger-menu" onClick={openMenu}>
-          <div className="line"></div>
-          <div className="line"></div>
-          <div className="line"></div>
+          <div id="line1" className="line"></div>
+          <div id="line2" className="line"></div>
+          <div id="line3" className="line"></div>
         </div>
 
         
