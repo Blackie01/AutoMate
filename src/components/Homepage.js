@@ -195,7 +195,7 @@ function Homepage() {
               <p className="product-listing-text">
                 Maximize productivity and reduce costs with preventive fleet
                 maintenance. Create thorough inspection records for vehicles and
-                assets. Maintain and access records electronically.
+                assets. Maintain and access all records electronically.
               </p>
             </section>
           </section>
