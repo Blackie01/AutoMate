@@ -8,7 +8,7 @@ import Button from "@mui/material/Button";
 import driverImage from "../assets/driver.jpg";
 import Testimonials from "./testimonials";
 import FooterSection from "./footer";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Homepage() {
   // handling the scroll/animation effect of homepage second floor
@@ -118,7 +118,7 @@ function Homepage() {
             </p>
 
             <section className="jumbo-buttons">
-              <NavLink to="/signup"><Button variant="outlined">Get Started</Button></NavLink>
+              <Link to='/signup'><Button variant="outlined">Get Started </Button></Link>
               <Button variant="contained">Download App</Button>
             </section>
           </section>
