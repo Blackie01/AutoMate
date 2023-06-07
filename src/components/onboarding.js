@@ -5,7 +5,7 @@ function Onboarding () {
     return (
 
         <section>
-            oops! page under construction. Oludamola, keep working
+            oops! page under construction.
         </section>
 
     )

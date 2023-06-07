@@ -118,7 +118,7 @@ function Homepage() {
             </p>
 
             <section className="jumbo-buttons">
-              <Link to='/signup'><Button variant="outlined">Get Started </Button></Link>
+              <Button variant="outlined"><Link className="ss-button"  to='/signup'>Get Started </Link></Button>
               <Button variant="contained">Download App</Button>
             </section>
           </section>

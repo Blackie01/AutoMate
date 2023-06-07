@@ -48,6 +48,16 @@
   margin: 20px auto;
 }
 
+.ss-button {
+  border: 1px solid red;
+  text-decoration: none;
+  width: auto;
+}
+
+.ss-button:visited {
+  color: inherit;
+}
+
 .hero-image {
   position: relative;
   width: 40%;

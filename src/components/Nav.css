@@ -111,7 +111,6 @@
     /* this is style for mobile menu embedded in Homepage.js */
     .mobile-menu {
         color: #000;
-
         width: 100vw;
         height: 100vh;
         background-color: #F2F2F2;
@@ -140,7 +139,4 @@
         padding-top: 10rem;
         font-size: larger;
       }
-
-
-
 }
