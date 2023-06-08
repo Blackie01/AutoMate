@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../assets/logo.png";
 import "./signup.css";
 import { Link } from "react-router-dom";
+import GoogleSignInButton from './GoogleSigninButton';
 
 function Signup() {
   function displayTest() {
@@ -83,7 +84,9 @@ function Signup() {
             />
           </form>
 
-          <div className="signup-with-google"></div>
+          <div className="signup-with-google">
+          <GoogleSignInButton />
+          </div>
 
           <p>
             Already have an account? <span>Login</span>
