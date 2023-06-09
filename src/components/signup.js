@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../assets/logo.png";
 import "./signup.css";
-import { Link } from "react-router-dom";
-import GoogleSignInButton from './GoogleSigninButton';
+import { Link, useNavigate } from "react-router-dom";
+import GoogleLogo from '../assets/rrgoogle.png';
+import { auth, provider } from './authentication/config'
+import { signInWithPopup } from 'firebase/auth'
+import Onboarding from "./onboarding";
 
 function Signup() {
   function displayTest() {
@@ -10,6 +13,24 @@ function Signup() {
     console.log(pswrd);
     document.getElementsByClassName("display-error").innerHTML = pswrd;
   }
+
+  const navigate = useNavigate()
+  const [value, setValue] = useState('')
+  const googleSignIn = () => {
+    signInWithPopup(auth, provider).then ((data) => {
+      setValue(data.user.email)
+      localStorage.setItem('email',data.user.email)
+    })
+    if (value) {
+      // window.location.reload()
+      navigate ('/onboarding')
+      
+    }
+  }
+
+  useEffect(() => {
+    setValue(localStorage.getItem('email'))
+  })
 
   return (
     <section className="overall-signup-page">
@@ -75,7 +96,6 @@ function Signup() {
               placeholder="Create password"
               required
             />
-            <p className="display-error"></p>
             <input
               onClick={displayTest}
               className="button-on-signup-page"
@@ -84,9 +104,20 @@ function Signup() {
             />
           </form>
 
-          <div className="signup-with-google">
-          <GoogleSignInButton />
-          </div>
+          <section className="or-section">
+            <div className="or-hr"></div>
+            <p>or</p>
+            <div className="or-hr"></div>
+          </section>
+
+          {/* Sign in with Google */}
+
+          {/* {value ? <Onboarding/> : */}
+          <section className="google-signin-button" onClick={googleSignIn}>
+            <img className="google-signin-img" src={GoogleLogo}/>
+            <span>Sign up with Google</span>
+          </section>
+          {/* } */}
 
           <p>
             Already have an account? <span>Login</span>

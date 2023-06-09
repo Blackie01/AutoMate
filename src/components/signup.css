@@ -81,6 +81,20 @@ form input {
  border: 1px solid #c7c7c7;
 }
 
+.or-section {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   gap: 1rem;
+}
+
+.or-hr {
+    border: 0.1px solid #000;
+    width: 3rem;
+    height: 0;
+}
+
 .button-on-signup-page {
     width: 100%;
     transition: background-color 0.3 ease;
@@ -92,6 +106,28 @@ form input {
 
 .right-div p {
     font-size: smaller;
+}
+
+.google-signin-button {
+    height: 2rem;
+    width: 100%;
+    border: 1px solid #c7c7c7;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.google-signin-button span {
+    width: 100%;
+    font-size: smaller;
+    display: flex;
+    padding-right: 1.5rem;
+    justify-content: center;
+}
+
+.google-signin-img {
+    height: 1.8rem;
+    width: 1.8rem;
 }
 
 
