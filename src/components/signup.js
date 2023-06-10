@@ -17,15 +17,17 @@ function Signup() {
   const navigate = useNavigate()
   const [value, setValue] = useState('')
   const googleSignIn = () => {
-    signInWithPopup(auth, provider).then ((data) => {
+    signInWithPopup(auth, provider)
+    .then ((data) => {
       setValue(data.user.email)
       localStorage.setItem('email',data.user.email)
-    })
-    if (value) {
-      // window.location.reload()
       navigate ('/onboarding')
-      
-    }
+
+    })
+    .catch((error) => {
+      // Handle any error that occurs during authentication
+      console.log('Sign-in error:', error);
+    });
   }
 
   useEffect(() => {
@@ -117,7 +119,7 @@ function Signup() {
             <img className="google-signin-img" src={GoogleLogo}/>
             <span>Sign up with Google</span>
           </section>
-          {/* } */}
+         {/* }  */}
 
           <p>
             Already have an account? <span>Login</span>

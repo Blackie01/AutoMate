@@ -8,6 +8,8 @@ function Onboarding () {
     const logout = () => {
         localStorage.clear()
         goback('/')
+    //   window.location.reload()
+
     }
 
     return (
