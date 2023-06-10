@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import logo from "../assets/logo.png";
 import "./signup.css";
 import { Link, useNavigate } from "react-router-dom";
-import GoogleLogo from '../assets/rrgoogle.png';
-import { auth, provider } from './authentication/config'
-import { signInWithPopup } from 'firebase/auth'
+import GoogleLogo from "../assets/rrgoogle.png";
+import { auth, provider } from "./authentication/config";
+import { signInWithPopup } from "firebase/auth";
 import Onboarding from "./onboarding";
 
 function Signup() {
@@ -14,25 +14,24 @@ function Signup() {
     document.getElementsByClassName("display-error").innerHTML = pswrd;
   }
 
-  const navigate = useNavigate()
-  const [value, setValue] = useState('')
+  const navigate = useNavigate();
+  const [value, setValue] = useState("");
   const googleSignIn = () => {
     signInWithPopup(auth, provider)
-    .then ((data) => {
-      setValue(data.user.email)
-      localStorage.setItem('email',data.user.email)
-      navigate ('/onboarding')
-
-    })
-    .catch((error) => {
-      // Handle any error that occurs during authentication
-      console.log('Sign-in error:', error);
-    });
-  }
+      .then((data) => {
+        setValue(data.user.email);
+        localStorage.setItem("email", data.user.email);
+        navigate("/onboarding");
+      })
+      .catch((error) => {
+        // Handle any error that occurs during authentication
+        console.log("Sign-in error:", error);
+      });
+  };
 
   useEffect(() => {
-    setValue(localStorage.getItem('email'))
-  })
+    setValue(localStorage.getItem("email"));
+  });
 
   return (
     <section className="overall-signup-page">
@@ -80,10 +79,7 @@ function Signup() {
           </div>
 
           <div className="contact-support">
-            More questions?{" "}
-            <span>
-              Contact support.
-            </span>
+            More questions? <span>Contact support.</span>
           </div>
         </div>
 
@@ -104,22 +100,20 @@ function Signup() {
               type="submit"
               value="Continue"
             />
+
+            <section className="or-section">
+              <div className="or-hr"></div>
+              <p>or</p>
+              <div className="or-hr"></div>
+            </section>
+
+            {/* Sign in with Google */}
+
+            <section className="google-signin-button" onClick={googleSignIn}>
+              <img className="google-signin-img" src={GoogleLogo} />
+              <span>Sign up with Google</span>
+            </section>
           </form>
-
-          <section className="or-section">
-            <div className="or-hr"></div>
-            <p>or</p>
-            <div className="or-hr"></div>
-          </section>
-
-          {/* Sign in with Google */}
-
-          {/* {value ? <Onboarding/> : */}
-          <section className="google-signin-button" onClick={googleSignIn}>
-            <img className="google-signin-img" src={GoogleLogo}/>
-            <span>Sign up with Google</span>
-          </section>
-         {/* }  */}
 
           <p>
             Already have an account? <span>Login</span>
