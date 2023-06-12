@@ -34,7 +34,9 @@ function Navigation( { openMenu}) {
         </section>
 
         <section className="access-menu">
+          <NavLink to="/login">
           <div id="login-button">Log in</div>
+          </NavLink>
 
           <NavLink
             to="/signup"

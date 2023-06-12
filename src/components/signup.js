@@ -1,62 +1,35 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import "./signup.css";
 import { Link, useNavigate } from "react-router-dom";
 import GoogleLogo from "../assets/rrgoogle.png";
 import { auth, provider } from "./authentication/config";
 import { signInWithPopup } from "firebase/auth";
-import { getAuth, createUserWithEmailAndPassword, signout } from "firebase/auth";
-import Onboarding from "./onboarding";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 
 function Signup() {
-
   const navigate = useNavigate();
 
-          const [email, setEmail] = useState("");
-          const [password, setPassword] = useState("");
-            console.log(auth?.currentUser?.email);
-          const signIn = async () => {
-            try {
-            await createUserWithEmailAndPassword(auth, email, password);
-            navigate('/onboarding')
-            } catch (err){
-              console.error(err);
-            }
-          };
+  // Sign up with email and password
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  console.log(auth?.currentUser?.email);
+  const signIn = async (event) => {
+    event.preventDefault();
+    try {
+      await createUserWithEmailAndPassword(auth, email, password);
+      navigate("/onboarding");
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
-
-      
-    
-
-  
-
-
-
-  // // Sign up with Google
-  // const [value, setValue] = useState("");
-  // const googleSignIn = () => {
-  //   signInWithPopup(auth, provider)
-  //     .then((data) => {
-  //       setValue(data.user.email);
-  //       localStorage.setItem("email", data.user.email);
-  //       navigate("/onboarding");
-  //     })
-  //     .catch((error) => {
-  //       // Handle any error that occurs during authentication
-  //       console.log("Sign-in error:", error);
-  //     });
-  // };
-
-  // useEffect(() => {
-  //   setValue(localStorage.getItem("email"));
-  // });
-
-
+  //sign up with google
   const signInWithGoogle = async () => {
     try {
-    await signInWithPopup(auth, provider);
-    navigate("/onboarding");
-    } catch (err){
+      await signInWithPopup(auth, provider);
+      navigate("/onboarding");
+    } catch (err) {
       console.error(err);
     }
   };
@@ -116,14 +89,14 @@ function Signup() {
           <form className="registration-form">
             <input type="text" placeholder="Company name" required />
             <input
-            onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => setEmail(e.target.value)}
               id="email-input"
               type="email"
               placeholder="Company email"
               required
             />
             <input
-            onChange={(e) => setPassword(e.target.value)}
+              onChange={(e) => setPassword(e.target.value)}
               id="passworded"
               type="password"
               placeholder="Create password"
@@ -145,10 +118,9 @@ function Signup() {
 
             {/* Sign in with Google */}
 
-            <section 
-            className="google-signin-button" 
-            // onClick={googleSignIn}
-            onClick={signInWithGoogle}
+            <section
+              className="google-signin-button"
+              onClick={signInWithGoogle}
             >
               <img className="google-signin-img" src={GoogleLogo} />
               <span>Sign up with Google</span>

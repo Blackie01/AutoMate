@@ -86,7 +86,9 @@ function Homepage() {
 
         <section className="mobile-access-menu">
 
+          <NavLink to="/login">
           <Button variant="contained" id="mobile-login-button">Log in</Button>
+          </NavLink>
 
           <NavLink
             to="/signup"
