@@ -5,62 +5,24 @@ import { Link, useNavigate } from "react-router-dom";
 import GoogleLogo from "../assets/rrgoogle.png";
 import { auth, provider } from "./authentication/config";
 import { signInWithPopup } from "firebase/auth";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signout } from "firebase/auth";
 import Onboarding from "./onboarding";
 
 function Signup() {
-  function displayTest() {
-    let pswrd = document.getElementById("passworded").value;
-    console.log(pswrd);
-    document.getElementsByClassName("display-error").innerHTML = pswrd;
-  }
 
   const navigate = useNavigate();
 
-  // Sign up with email and password
-
- 
-
-    const signupButton = document.getElementById('signup-button-aux')
-    
-    document.addEventListener('DOMContentLoaded', () => {
-    // const CreateAccount = () => {
-      // useEffect (() => {
-
-        signupButton.addEventListener('submit', (e) => {
-          e.preventDefault();
-      
-          const emailInput = document.getElementById("email-input");
-          const passwordInput = document.getElementById("passworded");
-      
-          const email = emailInput.value;
-          const password = passwordInput.value;
-
-          console.log("we got the " + email)
-      
-          const auth = getAuth();
-          createUserWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-              // Signed in
-              const user = userCredential.user;
-              // ...
-              console.log('New user created:', user.uid);
-              console.log('User:', user);
-              navigate ('/onboarding')
-              
-            })
-            .catch((error) => {
-              const errorCode = error.code;
-              const errorMessage = error.message;
-              console.error('Error creating user:', errorCode, errorMessage);
-              // ..
-            });
-    
-        })
-
-      // }, [])
-    // }
-  });
+          const [email, setEmail] = useState("");
+          const [password, setPassword] = useState("");
+            console.log(auth?.currentUser?.email);
+          const signIn = async () => {
+            try {
+            await createUserWithEmailAndPassword(auth, email, password);
+            navigate('/onboarding')
+            } catch (err){
+              console.error(err);
+            }
+          };
 
 
       
@@ -70,24 +32,34 @@ function Signup() {
 
 
 
-  // Sign up with Google
-  const [value, setValue] = useState("");
-  const googleSignIn = () => {
-    signInWithPopup(auth, provider)
-      .then((data) => {
-        setValue(data.user.email);
-        localStorage.setItem("email", data.user.email);
-        navigate("/onboarding");
-      })
-      .catch((error) => {
-        // Handle any error that occurs during authentication
-        console.log("Sign-in error:", error);
-      });
-  };
+  // // Sign up with Google
+  // const [value, setValue] = useState("");
+  // const googleSignIn = () => {
+  //   signInWithPopup(auth, provider)
+  //     .then((data) => {
+  //       setValue(data.user.email);
+  //       localStorage.setItem("email", data.user.email);
+  //       navigate("/onboarding");
+  //     })
+  //     .catch((error) => {
+  //       // Handle any error that occurs during authentication
+  //       console.log("Sign-in error:", error);
+  //     });
+  // };
 
-  useEffect(() => {
-    setValue(localStorage.getItem("email"));
-  });
+  // useEffect(() => {
+  //   setValue(localStorage.getItem("email"));
+  // });
+
+
+  const signInWithGoogle = async () => {
+    try {
+    await signInWithPopup(auth, provider);
+    navigate("/onboarding");
+    } catch (err){
+      console.error(err);
+    }
+  };
 
   return (
     <section className="overall-signup-page">
@@ -144,19 +116,21 @@ function Signup() {
           <form className="registration-form">
             <input type="text" placeholder="Company name" required />
             <input
+            onChange={(e) => setEmail(e.target.value)}
               id="email-input"
               type="email"
               placeholder="Company email"
               required
             />
             <input
+            onChange={(e) => setPassword(e.target.value)}
               id="passworded"
               type="password"
               placeholder="Create password"
               required
             />
             <input
-              // onClick={CreateAccount}
+              onClick={signIn}
               id="signup-button-aux"
               className="button-on-signup-page"
               type="submit"
@@ -171,7 +145,11 @@ function Signup() {
 
             {/* Sign in with Google */}
 
-            <section className="google-signin-button" onClick={googleSignIn}>
+            <section 
+            className="google-signin-button" 
+            // onClick={googleSignIn}
+            onClick={signInWithGoogle}
+            >
               <img className="google-signin-img" src={GoogleLogo} />
               <span>Sign up with Google</span>
             </section>
