@@ -8,7 +8,8 @@ import { signInWithPopup } from "firebase/auth";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 
 function Signup() {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
+
 
   // Sign up with email and password
   const [email, setEmail] = useState("");
@@ -33,6 +34,8 @@ function Signup() {
       console.error(err);
     }
   };
+
+  // Check if password is up to 6 characters
 
   return (
     <section className="overall-signup-page">
@@ -128,7 +131,7 @@ function Signup() {
           </form>
 
           <p>
-            Already have an account? <span>Login</span>
+            Already have an account? <Link to="/login"><span>Login</span></Link>
           </p>
         </div>
       </section>
