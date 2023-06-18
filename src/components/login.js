@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import logo from "../assets/logo.png";
+
 import './login.css'
 import { auth, provider } from "./authentication/config";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
@@ -37,11 +39,18 @@ function Login() {
   return (
     <section className="login-page">
       <section className="login-container">
-        <Link to="/">
-          <button>go to home</button>
+        
+        <form className="login-form">
+        <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+        <span id="login-logo" className="logo-span-signup">
+              <img className="class-one-logo" src={logo} />
+              <p>AutoMate</p>
+            </span>
         </Link>
-        <form>
+        <h3>Login into your account.</h3>
+
           <input
+          className="login-form-input"
             type="email"
             placeholder="email"
             onChange={(e) => setEmail(e.target.value)}
@@ -49,6 +58,7 @@ function Login() {
           />
 
           <input
+          className="login-form-input"
             type="password"
             placeholder="password"
             onChange={(e) => setPassword(e.target.value)}
@@ -57,17 +67,27 @@ function Login() {
 
           <p id="error-display"></p>
 
-          <input type="submit" onClick={login} />
+          <input type="submit" onClick={login}
+          className="button-on-login-page"
+          />
+
+<section className="or-section">
+              <div className="or-hr"></div>
+              <p>or</p>
+              <div className="or-hr"></div>
+            </section>
 
           <section className="google-signin-button" onClick={signInWithGoogle}>
             <img className="google-signin-img" src={GoogleLogo} />
             <span>Sign in with Google</span>
           </section>
-        </form>
 
-        <p>
+          <p style={{fontSize: "smaller"}}>
             Don't have an account? <Link to="/signup"><span>Sign up</span></Link>
           </p>
+        </form>
+
+        
       </section>
     </section>
   );
