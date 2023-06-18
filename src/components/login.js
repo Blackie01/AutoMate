@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './login.css'
 import { auth, provider } from "./authentication/config";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { Link, useNavigate } from "react-router-dom";
@@ -34,7 +35,7 @@ function Login() {
   };
 
   return (
-    <section>
+    <section className="login-page">
       <section className="login-container">
         <Link to="/">
           <button>go to home</button>
@@ -63,6 +64,10 @@ function Login() {
             <span>Sign in with Google</span>
           </section>
         </form>
+
+        <p>
+            Don't have an account? <Link to="/signup"><span>Sign up</span></Link>
+          </p>
       </section>
     </section>
   );
