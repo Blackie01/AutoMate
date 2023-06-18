@@ -34,7 +34,7 @@ function Navigation( { openMenu}) {
         </section>
 
         <section className="access-menu">
-          <NavLink to="/login">
+          <NavLink to="/login" style={{ textDecoration: "none", color: "inherit" }}>
           <div id="login-button">Log in</div>
           </NavLink>
 
