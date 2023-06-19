@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.png";
-
 import "./login.css";
 import { auth, provider } from "./authentication/config";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
@@ -22,7 +21,7 @@ function Login() {
     } catch (err) {
       console.error(err);
       document.getElementById("error-display").innerHTML =
-        "You don't have an account with us. Sign up.";
+        "You don't have an account with us. Sign up below.";
     }
   };
 
