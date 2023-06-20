@@ -1,0 +1,61 @@
+#onboarding-one {
+    background-color: #b6f1dd;
+    /* background-color: rgb(7, 138, 99); */
+    height: 100vh;
+}
+
+#overall-onboard-one-container {
+    width: max-content;
+    margin: 10% auto auto auto;
+    text-align: center;
+}
+
+#onboard-one-text {
+    font-size: 1.5rem;
+}
+
+#onboard-one-options {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    width: max-content;
+    margin-top: 2rem;
+}
+
+.option-container {
+    width: 8rem;
+    height: max-content;
+    padding: 1rem;
+    background-color: rgb(7, 138, 99);
+    color: #fff;
+    font-weight: 700;
+    border-radius: 10px;
+}
+
+.option-container p {
+    margin-bottom: 0;
+}
+
+.icons {
+    height: 2rem;
+    width: 2rem;
+    color: white;
+}
+
+#onboard-hr {
+    margin: 2rem 0;
+    height: 1px;
+    border: none;
+    background-color: rgb(7, 138, 99);
+}
+
+.next-button {
+    border: 1px solid #fff;
+    width: max-content;
+    padding: 1rem 3.5rem;
+    margin: auto;
+}
+
+.next-button:hover {
+    cursor: pointer;
+}
