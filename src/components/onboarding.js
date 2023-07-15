@@ -36,8 +36,8 @@ function Onboarding () {
 
         <section id="onboarding-one">
             <div 
-            // onClick={logout}
             onClick={logOut}
+            className="onboard-logo"
             >
               <img className="class-one-logo" src={logo} />
             </div>
@@ -49,7 +49,7 @@ function Onboarding () {
 
               <section id="onboard-one-options">
                 <div className="option-container">
-                  <img src={location} className="icons"/>
+                  <img src={location} id="tracker-icon" className="icons"/>
                   <p>Vehicle Tracker</p>
                 </div>
 
@@ -64,7 +64,7 @@ function Onboarding () {
                 </div>
 
                 <div className="option-container">
-                  <img src={fuel} className="icons"/>
+                  <img src={fuel} id="fueling-icon" className="icons"/>
                   <p>Fuel Manager</p>
                 </div>
 

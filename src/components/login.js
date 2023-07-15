@@ -45,7 +45,7 @@ function Login() {
               <p>AutoMate</p>
             </span>
           </Link>
-          <h3>Login into your account.</h3>
+          <h3>Login</h3>
 
           <input
             className="login-form-input"

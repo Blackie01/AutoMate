@@ -1,7 +1,11 @@
 #onboarding-one {
     background-color: #b6f1dd;
-    /* background-color: rgb(7, 138, 99); */
+    /* background-color: #decade; */
     height: 100vh;
+}
+
+.onboard-logo {
+    cursor: pointer;
 }
 
 #overall-onboard-one-container {
@@ -40,6 +44,20 @@
     height: 2rem;
     width: 2rem;
     color: white;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+#tracker-icon {
+    /* scale: 0.8; */
+}
+
+#img-2-onboard {
+    /* scale: 1.3; */
+}
+
+#fueling-icon {
+    border: none;
 }
 
 #onboard-hr {
