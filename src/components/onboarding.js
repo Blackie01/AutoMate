@@ -1,7 +1,5 @@
 import React from "react";
 import { useNavigate } from "react-router";
-import { signOut } from "firebase/auth";
-import { auth } from "./authentication/config";
 import logo from '../assets/logo.png'
 import location from '../assets/xlocation.png'
 import maintenance from '../assets/maintenance.png'
@@ -16,27 +14,10 @@ function Onboarding () {
 
     const goback = useNavigate()
 
-    // const logout = () => {
-    //     localStorage.clear()
-    //     goback('/')
-    // //   window.location.reload()
-
-    // }
-
-    const logOut = async () => {
-        try {
-        await signOut(auth);
-        goback('/')
-        } catch (err){
-          console.error(err);
-        }
-      };
-
     return (
 
         <section id="onboarding-one">
             <div 
-            onClick={logOut}
             className="onboard-logo"
             >
               <img className="class-one-logo" src={logo} />

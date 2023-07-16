@@ -1,39 +1,13 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import "./login.css";
-import { auth, provider } from "./authentication/config";
-import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { Link, useNavigate } from "react-router-dom";
 import GoogleLogo from "../assets/rrgoogle.png";
 
 function Login() {
   const navigate = useNavigate();
 
-  // login with email and password
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  const login = async (event) => {
-    event.preventDefault();
-    try {
-      await signInWithEmailAndPassword(auth, email, password);
-      navigate("/onboarding");
-    } catch (err) {
-      console.error(err);
-      document.getElementById("error-display").innerHTML =
-        "You don't have an account with us. Sign up below.";
-    }
-  };
-
-  // login with google
-  const signInWithGoogle = async () => {
-    try {
-      await signInWithPopup(auth, provider);
-      navigate("/onboarding");
-    } catch (err) {
-      console.error(err);
-    }
-  };
+ 
 
   return (
     <section className="login-page">
@@ -51,7 +25,6 @@ function Login() {
             className="login-form-input"
             type="email"
             placeholder="email"
-            onChange={(e) => setEmail(e.target.value)}
             required
           />
 
@@ -59,7 +32,6 @@ function Login() {
             className="login-form-input"
             type="password"
             placeholder="password"
-            onChange={(e) => setPassword(e.target.value)}
             required
           />
 
@@ -67,7 +39,6 @@ function Login() {
 
           <input
             type="submit"
-            onClick={login}
             className="button-on-login-page"
           />
 
@@ -77,7 +48,7 @@ function Login() {
             <div className="or-hr"></div>
           </section>
 
-          <section className="google-signin-button" onClick={signInWithGoogle}>
+          <section className="google-signin-button">
             <img className="google-signin-img" src={GoogleLogo} />
             <span>Sign in with Google</span>
           </section>

@@ -3,39 +3,45 @@ import logo from "../assets/logo.png";
 import "./signup.css";
 import { Link, useNavigate } from "react-router-dom";
 import GoogleLogo from "../assets/rrgoogle.png";
-import { auth, provider } from "./authentication/config";
-import { signInWithPopup } from "firebase/auth";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createClient } from "@supabase/supabase-js";
+
+// Create a single supabase client for interacting with your database
+const supabase = createClient(
+  "https://ajayaqiwuafrfmgzripn.supabase.co",
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFqYXlhcWl3dWFmcmZtZ3pyaXBuIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODk0NzE0MjEsImV4cCI6MjAwNTA0NzQyMX0.zRxlg047kf0yET1cPuA9p6ryNWjANWfdyAp_J4p7g-Q"
+);
 
 function Signup() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-
-  // Sign up with email and password
+  // Manage input state
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  console.log(auth?.currentUser?.email);
-  const signIn = async (event) => {
-    event.preventDefault();
-    try {
-      await createUserWithEmailAndPassword(auth, email, password);
-      navigate("/onboarding");
-    } catch (err) {
-      console.error(err);
+  const [errorMessage, setErrorMessage] = useState("")
+
+  // To create account with email and password
+  const handleSignIn = async (e) => {
+    e.preventDefault();
+
+    if (password.length >= 6) {
+      try {
+        const { data, error } = await supabase.auth.signUp({
+          email,
+          password,
+        });
+  
+        if (data) {
+          navigate("/onboarding");
+        } 
+  
+      } catch (error) {
+        console.log(error);
+      }
+    } else {
+      setErrorMessage("Password should be 6 characters or more")
+      setTimeout(() => setErrorMessage(""), 4000) 
     }
   };
-
-  //sign up with google
-  const signInWithGoogle = async () => {
-    try {
-      await signInWithPopup(auth, provider);
-      navigate("/onboarding");
-    } catch (err) {
-      console.error(err);
-    }
-  };
-
-  // Check if password is up to 6 characters
 
   return (
     <section className="overall-signup-page">
@@ -92,25 +98,27 @@ function Signup() {
           <form className="registration-form">
             <input type="text" placeholder="Company name" required />
             <input
-              onChange={(e) => setEmail(e.target.value)}
               id="email-input"
               type="email"
               placeholder="Company email"
               required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <input
-              onChange={(e) => setPassword(e.target.value)}
               id="passworded"
               type="password"
               placeholder="Create password"
               required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
             <input
-              onClick={signIn}
               id="signup-button-aux"
               className="button-on-signup-page"
               type="submit"
               value="Continue"
+              onClick={handleSignIn}
             />
 
             <section className="or-section">
@@ -119,19 +127,21 @@ function Signup() {
               <div className="or-hr"></div>
             </section>
 
+            <p style={{color: 'red', textAlign: 'center', height: '0.8rem', marginTop: '0'}}>{errorMessage}</p>
+
             {/* Sign in with Google */}
 
-            <section
-              className="google-signin-button"
-              onClick={signInWithGoogle}
-            >
+            <section className="google-signin-button">
               <img className="google-signin-img" src={GoogleLogo} />
               <span>Sign up with Google</span>
             </section>
           </form>
 
           <p>
-            Already have an account? <Link to="/login"><span>Login</span></Link>
+            Already have an account?{" "}
+            <Link to="/login">
+              <span>Login</span>
+            </Link>
           </p>
         </div>
       </section>
