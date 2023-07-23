@@ -24,11 +24,14 @@ function Login() {
     try {
       const {data, error} = await supabase.auth.signInWithPassword({email, password})
 
-      if(data) {
-        navigate('/onboarding')
-      } else {
+      if(error) {
         setErrorMessage(`You don't have an AutoMate account`)
         setTimeout(() => setErrorMessage(''), 4000)
+      } else {
+        
+
+        navigate('/onboarding')
+
       }
     } catch (error) {
       console.error(error.message)

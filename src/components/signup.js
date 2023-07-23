@@ -23,12 +23,14 @@ function Signup() {
   const handleSignIn = async (e) => {
     e.preventDefault();
 
-    if (password.length >= 6) {
+    if (password.length > 5) {
       try {
         const { data, error } = await supabase.auth.signUp({
           email,
           password,
-        });
+        },
+        { disableEmailVerification: true }
+        );
   
         if (data) {
           navigate("/onboarding");
