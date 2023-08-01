@@ -25,7 +25,7 @@ function Onboarding () {
 
             <section id="overall-onboard-one-container">
               <h3 id="onboard-one-text">
-                Welcome, what do you need our help with? 
+                Welcome, what do you need help with? 
               </h3>
 
               <section id="onboard-one-options">
